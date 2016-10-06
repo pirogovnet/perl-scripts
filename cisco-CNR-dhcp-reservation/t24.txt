@@ -1,0 +1,54 @@
+policy <%hostname%>.<%domain%>  create
+policy <%hostname%>.<%domain%>  set offer-timeout 60s
+policy <%hostname%>.<%domain%>  set grace-period  0
+policy <%hostname%>.<%domain%>  set use-client-id-for-reservations  on
+policy <%hostname%>.<%domain%>  setOption routers <%gw%>
+policy <%hostname%>.<%domain%>  setOption subnet-mask  <%mask%>
+policy <%hostname%>.<%domain%>  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class <%gw%> create
+client-class <%gw%> set selection-criteria "<%hostname%>.lan"
+client-class <%gw%> set policy-name  <%hostname%>.<%domain%>
+
+client-class <%gw%> set host-name <%sw_aggr%>
+client-class <%gw%> set domain-name <%new_domain%> 
+
+client-class <%gw%>  set client-lookup-id=@a.txt
+client-class <%gw%>  set override-client-id=@a.txt
+
+
+
+
+scope <%hostname%>.<%domain%> create <%subnet%> <%mask%>
+scope <%hostname%>.<%domain%> set policy  <%hostname%>.<%domain%>
+scope <%hostname%>.<%domain%> set selection-tag-list  "<%hostname%>.<%domain%>"
+
+
+scope <%hostname%>.<%domain%> addReservation <%subnet+1%> "<%mac%> 00:01"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+2%> "<%mac%> 00:02"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+3%> "<%mac%> 00:03"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+4%> "<%mac%> 00:04"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+5%> "<%mac%> 00:05"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+6%> "<%mac%> 00:06"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+7%> "<%mac%> 00:07"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+8%> "<%mac%> 00:08"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+9%> "<%mac%> 00:09"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+10%> "<%mac%> 00:0a"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+11%> "<%mac%> 00:0b"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+12%> "<%mac%> 00:0c"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+13%> "<%mac%> 00:0d"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+14%> "<%mac%> 00:0e"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+15%> "<%mac%> 00:0f"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+16%> "<%mac%> 00:10"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+17%> "<%mac%> 00:11"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+18%> "<%mac%> 00:12"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+19%> "<%mac%> 00:13"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+20%> "<%mac%> 00:14"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+21%> "<%mac%> 00:15"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+22%> "<%mac%> 00:16"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+23%> "<%mac%> 00:17"  -string
+scope <%hostname%>.<%domain%> addReservation <%subnet+24%> "<%mac%> 00:18"  -string
+
+dhcp reload

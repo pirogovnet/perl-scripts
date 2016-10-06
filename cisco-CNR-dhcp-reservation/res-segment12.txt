@@ -1,0 +1,2090 @@
+policy sw-12-002.lan  create
+policy sw-12-002.lan  set offer-timeout 60s
+policy sw-12-002.lan  set grace-period  0
+policy sw-12-002.lan  set use-client-id-for-reservations  on
+policy sw-12-002.lan  setOption routers 90.155.140.30
+policy sw-12-002.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-002.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.140.30 create
+client-class 90.155.140.30 set selection-criteria "sw-12-002.lan"
+client-class 90.155.140.30 set policy-name  sw-12-002.lan
+
+client-class 90.155.140.30 set host-name sw-12-001
+client-class 90.155.140.30 set domain-name vl_502 
+
+client-class 90.155.140.30  set client-lookup-id=@a.txt
+client-class 90.155.140.30  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-002.lan create 90.155.140.0 255.255.255.224
+scope sw-12-002.lan set policy  sw-12-002.lan
+scope sw-12-002.lan set selection-tag-list  "sw-12-002.lan"
+
+
+scope sw-12-002.lan addReservation 90.155.140.1 "00:19:5b:ed:a0:22 00:01"  -string
+scope sw-12-002.lan addReservation 90.155.140.2 "00:19:5b:ed:a0:22 00:02"  -string
+scope sw-12-002.lan addReservation 90.155.140.3 "00:19:5b:ed:a0:22 00:03"  -string
+scope sw-12-002.lan addReservation 90.155.140.4 "00:19:5b:ed:a0:22 00:04"  -string
+scope sw-12-002.lan addReservation 90.155.140.5 "00:19:5b:ed:a0:22 00:05"  -string
+scope sw-12-002.lan addReservation 90.155.140.6 "00:19:5b:ed:a0:22 00:06"  -string
+scope sw-12-002.lan addReservation 90.155.140.7 "00:19:5b:ed:a0:22 00:07"  -string
+scope sw-12-002.lan addReservation 90.155.140.8 "00:19:5b:ed:a0:22 00:08"  -string
+scope sw-12-002.lan addReservation 90.155.140.9 "00:19:5b:ed:a0:22 00:09"  -string
+scope sw-12-002.lan addReservation 90.155.140.10 "00:19:5b:ed:a0:22 00:0a"  -string
+scope sw-12-002.lan addReservation 90.155.140.11 "00:19:5b:ed:a0:22 00:0b"  -string
+scope sw-12-002.lan addReservation 90.155.140.12 "00:19:5b:ed:a0:22 00:0c"  -string
+scope sw-12-002.lan addReservation 90.155.140.13 "00:19:5b:ed:a0:22 00:0d"  -string
+scope sw-12-002.lan addReservation 90.155.140.14 "00:19:5b:ed:a0:22 00:0e"  -string
+scope sw-12-002.lan addReservation 90.155.140.15 "00:19:5b:ed:a0:22 00:0f"  -string
+scope sw-12-002.lan addReservation 90.155.140.16 "00:19:5b:ed:a0:22 00:10"  -string
+scope sw-12-002.lan addReservation 90.155.140.17 "00:19:5b:ed:a0:22 00:11"  -string
+scope sw-12-002.lan addReservation 90.155.140.18 "00:19:5b:ed:a0:22 00:12"  -string
+scope sw-12-002.lan addReservation 90.155.140.19 "00:19:5b:ed:a0:22 00:13"  -string
+scope sw-12-002.lan addReservation 90.155.140.20 "00:19:5b:ed:a0:22 00:14"  -string
+scope sw-12-002.lan addReservation 90.155.140.21 "00:19:5b:ed:a0:22 00:15"  -string
+scope sw-12-002.lan addReservation 90.155.140.22 "00:19:5b:ed:a0:22 00:16"  -string
+scope sw-12-002.lan addReservation 90.155.140.23 "00:19:5b:ed:a0:22 00:17"  -string
+scope sw-12-002.lan addReservation 90.155.140.24 "00:19:5b:ed:a0:22 00:18"  -string
+
+dhcp reload
+
+policy sw-12-003.lan  create
+policy sw-12-003.lan  set offer-timeout 60s
+policy sw-12-003.lan  set grace-period  0
+policy sw-12-003.lan  set use-client-id-for-reservations  on
+policy sw-12-003.lan  setOption routers 90.155.140.62
+policy sw-12-003.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-003.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.140.62 create
+client-class 90.155.140.62 set selection-criteria "sw-12-003.lan"
+client-class 90.155.140.62 set policy-name  sw-12-003.lan
+
+client-class 90.155.140.62 set host-name sw-12-001
+client-class 90.155.140.62 set domain-name vl_503 
+
+client-class 90.155.140.62  set client-lookup-id=@a.txt
+client-class 90.155.140.62  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-003.lan create 90.155.140.32 255.255.255.224
+scope sw-12-003.lan set policy  sw-12-003.lan
+scope sw-12-003.lan set selection-tag-list  "sw-12-003.lan"
+
+
+scope sw-12-003.lan addReservation 90.155.140.33 "00:17:9a:bf:b7:b8 00:01"  -string
+scope sw-12-003.lan addReservation 90.155.140.34 "00:17:9a:bf:b7:b8 00:02"  -string
+scope sw-12-003.lan addReservation 90.155.140.35 "00:17:9a:bf:b7:b8 00:03"  -string
+scope sw-12-003.lan addReservation 90.155.140.36 "00:17:9a:bf:b7:b8 00:04"  -string
+scope sw-12-003.lan addReservation 90.155.140.37 "00:17:9a:bf:b7:b8 00:05"  -string
+scope sw-12-003.lan addReservation 90.155.140.38 "00:17:9a:bf:b7:b8 00:06"  -string
+scope sw-12-003.lan addReservation 90.155.140.39 "00:17:9a:bf:b7:b8 00:07"  -string
+scope sw-12-003.lan addReservation 90.155.140.40 "00:17:9a:bf:b7:b8 00:08"  -string
+scope sw-12-003.lan addReservation 90.155.140.41 "00:17:9a:bf:b7:b8 00:09"  -string
+scope sw-12-003.lan addReservation 90.155.140.42 "00:17:9a:bf:b7:b8 00:0a"  -string
+scope sw-12-003.lan addReservation 90.155.140.43 "00:17:9a:bf:b7:b8 00:0b"  -string
+scope sw-12-003.lan addReservation 90.155.140.44 "00:17:9a:bf:b7:b8 00:0c"  -string
+scope sw-12-003.lan addReservation 90.155.140.45 "00:17:9a:bf:b7:b8 00:0d"  -string
+scope sw-12-003.lan addReservation 90.155.140.46 "00:17:9a:bf:b7:b8 00:0e"  -string
+scope sw-12-003.lan addReservation 90.155.140.47 "00:17:9a:bf:b7:b8 00:0f"  -string
+scope sw-12-003.lan addReservation 90.155.140.48 "00:17:9a:bf:b7:b8 00:10"  -string
+scope sw-12-003.lan addReservation 90.155.140.49 "00:17:9a:bf:b7:b8 00:11"  -string
+scope sw-12-003.lan addReservation 90.155.140.50 "00:17:9a:bf:b7:b8 00:12"  -string
+scope sw-12-003.lan addReservation 90.155.140.51 "00:17:9a:bf:b7:b8 00:13"  -string
+scope sw-12-003.lan addReservation 90.155.140.52 "00:17:9a:bf:b7:b8 00:14"  -string
+scope sw-12-003.lan addReservation 90.155.140.53 "00:17:9a:bf:b7:b8 00:15"  -string
+scope sw-12-003.lan addReservation 90.155.140.54 "00:17:9a:bf:b7:b8 00:16"  -string
+scope sw-12-003.lan addReservation 90.155.140.55 "00:17:9a:bf:b7:b8 00:17"  -string
+scope sw-12-003.lan addReservation 90.155.140.56 "00:17:9a:bf:b7:b8 00:18"  -string
+
+dhcp reload
+
+policy sw-12-004.lan  create
+policy sw-12-004.lan  set offer-timeout 60s
+policy sw-12-004.lan  set grace-period  0
+policy sw-12-004.lan  set use-client-id-for-reservations  on
+policy sw-12-004.lan  setOption routers 90.155.140.94
+policy sw-12-004.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-004.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.140.94 create
+client-class 90.155.140.94 set selection-criteria "sw-12-004.lan"
+client-class 90.155.140.94 set policy-name  sw-12-004.lan
+
+client-class 90.155.140.94 set host-name sw-12-001
+client-class 90.155.140.94 set domain-name vl_504 
+
+client-class 90.155.140.94  set client-lookup-id=@a.txt
+client-class 90.155.140.94  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-004.lan create 90.155.140.64 255.255.255.224
+scope sw-12-004.lan set policy  sw-12-004.lan
+scope sw-12-004.lan set selection-tag-list  "sw-12-004.lan"
+
+
+scope sw-12-004.lan addReservation 90.155.140.65 "00:17:9a:7a:96:94 00:01"  -string
+scope sw-12-004.lan addReservation 90.155.140.66 "00:17:9a:7a:96:94 00:02"  -string
+scope sw-12-004.lan addReservation 90.155.140.67 "00:17:9a:7a:96:94 00:03"  -string
+scope sw-12-004.lan addReservation 90.155.140.68 "00:17:9a:7a:96:94 00:04"  -string
+scope sw-12-004.lan addReservation 90.155.140.69 "00:17:9a:7a:96:94 00:05"  -string
+scope sw-12-004.lan addReservation 90.155.140.70 "00:17:9a:7a:96:94 00:06"  -string
+scope sw-12-004.lan addReservation 90.155.140.71 "00:17:9a:7a:96:94 00:07"  -string
+scope sw-12-004.lan addReservation 90.155.140.72 "00:17:9a:7a:96:94 00:08"  -string
+scope sw-12-004.lan addReservation 90.155.140.73 "00:17:9a:7a:96:94 00:09"  -string
+scope sw-12-004.lan addReservation 90.155.140.74 "00:17:9a:7a:96:94 00:0a"  -string
+scope sw-12-004.lan addReservation 90.155.140.75 "00:17:9a:7a:96:94 00:0b"  -string
+scope sw-12-004.lan addReservation 90.155.140.76 "00:17:9a:7a:96:94 00:0c"  -string
+scope sw-12-004.lan addReservation 90.155.140.77 "00:17:9a:7a:96:94 00:0d"  -string
+scope sw-12-004.lan addReservation 90.155.140.78 "00:17:9a:7a:96:94 00:0e"  -string
+scope sw-12-004.lan addReservation 90.155.140.79 "00:17:9a:7a:96:94 00:0f"  -string
+scope sw-12-004.lan addReservation 90.155.140.80 "00:17:9a:7a:96:94 00:10"  -string
+scope sw-12-004.lan addReservation 90.155.140.81 "00:17:9a:7a:96:94 00:11"  -string
+scope sw-12-004.lan addReservation 90.155.140.82 "00:17:9a:7a:96:94 00:12"  -string
+scope sw-12-004.lan addReservation 90.155.140.83 "00:17:9a:7a:96:94 00:13"  -string
+scope sw-12-004.lan addReservation 90.155.140.84 "00:17:9a:7a:96:94 00:14"  -string
+scope sw-12-004.lan addReservation 90.155.140.85 "00:17:9a:7a:96:94 00:15"  -string
+scope sw-12-004.lan addReservation 90.155.140.86 "00:17:9a:7a:96:94 00:16"  -string
+scope sw-12-004.lan addReservation 90.155.140.87 "00:17:9a:7a:96:94 00:17"  -string
+scope sw-12-004.lan addReservation 90.155.140.88 "00:17:9a:7a:96:94 00:18"  -string
+
+dhcp reload
+
+policy sw-12-005.lan  create
+policy sw-12-005.lan  set offer-timeout 60s
+policy sw-12-005.lan  set grace-period  0
+policy sw-12-005.lan  set use-client-id-for-reservations  on
+policy sw-12-005.lan  setOption routers 90.155.140.126
+policy sw-12-005.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-005.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.140.126 create
+client-class 90.155.140.126 set selection-criteria "sw-12-005.lan"
+client-class 90.155.140.126 set policy-name  sw-12-005.lan
+
+client-class 90.155.140.126 set host-name sw-12-001
+client-class 90.155.140.126 set domain-name vl_505 
+
+client-class 90.155.140.126  set client-lookup-id=@a.txt
+client-class 90.155.140.126  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-005.lan create 90.155.140.96 255.255.255.224
+scope sw-12-005.lan set policy  sw-12-005.lan
+scope sw-12-005.lan set selection-tag-list  "sw-12-005.lan"
+
+
+scope sw-12-005.lan addReservation 90.155.140.97 "00:17:9a:7a:14:b8 00:01"  -string
+scope sw-12-005.lan addReservation 90.155.140.98 "00:17:9a:7a:14:b8 00:02"  -string
+scope sw-12-005.lan addReservation 90.155.140.99 "00:17:9a:7a:14:b8 00:03"  -string
+scope sw-12-005.lan addReservation 90.155.140.100 "00:17:9a:7a:14:b8 00:04"  -string
+scope sw-12-005.lan addReservation 90.155.140.101 "00:17:9a:7a:14:b8 00:05"  -string
+scope sw-12-005.lan addReservation 90.155.140.102 "00:17:9a:7a:14:b8 00:06"  -string
+scope sw-12-005.lan addReservation 90.155.140.103 "00:17:9a:7a:14:b8 00:07"  -string
+scope sw-12-005.lan addReservation 90.155.140.104 "00:17:9a:7a:14:b8 00:08"  -string
+scope sw-12-005.lan addReservation 90.155.140.105 "00:17:9a:7a:14:b8 00:09"  -string
+scope sw-12-005.lan addReservation 90.155.140.106 "00:17:9a:7a:14:b8 00:0a"  -string
+scope sw-12-005.lan addReservation 90.155.140.107 "00:17:9a:7a:14:b8 00:0b"  -string
+scope sw-12-005.lan addReservation 90.155.140.108 "00:17:9a:7a:14:b8 00:0c"  -string
+scope sw-12-005.lan addReservation 90.155.140.109 "00:17:9a:7a:14:b8 00:0d"  -string
+scope sw-12-005.lan addReservation 90.155.140.110 "00:17:9a:7a:14:b8 00:0e"  -string
+scope sw-12-005.lan addReservation 90.155.140.111 "00:17:9a:7a:14:b8 00:0f"  -string
+scope sw-12-005.lan addReservation 90.155.140.112 "00:17:9a:7a:14:b8 00:10"  -string
+scope sw-12-005.lan addReservation 90.155.140.113 "00:17:9a:7a:14:b8 00:11"  -string
+scope sw-12-005.lan addReservation 90.155.140.114 "00:17:9a:7a:14:b8 00:12"  -string
+scope sw-12-005.lan addReservation 90.155.140.115 "00:17:9a:7a:14:b8 00:13"  -string
+scope sw-12-005.lan addReservation 90.155.140.116 "00:17:9a:7a:14:b8 00:14"  -string
+scope sw-12-005.lan addReservation 90.155.140.117 "00:17:9a:7a:14:b8 00:15"  -string
+scope sw-12-005.lan addReservation 90.155.140.118 "00:17:9a:7a:14:b8 00:16"  -string
+scope sw-12-005.lan addReservation 90.155.140.119 "00:17:9a:7a:14:b8 00:17"  -string
+scope sw-12-005.lan addReservation 90.155.140.120 "00:17:9a:7a:14:b8 00:18"  -string
+
+dhcp reload
+
+policy sw-12-007.lan  create
+policy sw-12-007.lan  set offer-timeout 60s
+policy sw-12-007.lan  set grace-period  0
+policy sw-12-007.lan  set use-client-id-for-reservations  on
+policy sw-12-007.lan  setOption routers 90.155.140.190
+policy sw-12-007.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-007.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.140.190 create
+client-class 90.155.140.190 set selection-criteria "sw-12-007.lan"
+client-class 90.155.140.190 set policy-name  sw-12-007.lan
+
+client-class 90.155.140.190 set host-name sw-12-001
+client-class 90.155.140.190 set domain-name vl_507 
+
+client-class 90.155.140.190  set client-lookup-id=@a.txt
+client-class 90.155.140.190  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-007.lan create 90.155.140.160 255.255.255.224
+scope sw-12-007.lan set policy  sw-12-007.lan
+scope sw-12-007.lan set selection-tag-list  "sw-12-007.lan"
+
+
+scope sw-12-007.lan addReservation 90.155.140.161 "00:19:5b:ed:8b:d7 00:01"  -string
+scope sw-12-007.lan addReservation 90.155.140.162 "00:19:5b:ed:8b:d7 00:02"  -string
+scope sw-12-007.lan addReservation 90.155.140.163 "00:19:5b:ed:8b:d7 00:03"  -string
+scope sw-12-007.lan addReservation 90.155.140.164 "00:19:5b:ed:8b:d7 00:04"  -string
+scope sw-12-007.lan addReservation 90.155.140.165 "00:19:5b:ed:8b:d7 00:05"  -string
+scope sw-12-007.lan addReservation 90.155.140.166 "00:19:5b:ed:8b:d7 00:06"  -string
+scope sw-12-007.lan addReservation 90.155.140.167 "00:19:5b:ed:8b:d7 00:07"  -string
+scope sw-12-007.lan addReservation 90.155.140.168 "00:19:5b:ed:8b:d7 00:08"  -string
+scope sw-12-007.lan addReservation 90.155.140.169 "00:19:5b:ed:8b:d7 00:09"  -string
+scope sw-12-007.lan addReservation 90.155.140.170 "00:19:5b:ed:8b:d7 00:0a"  -string
+scope sw-12-007.lan addReservation 90.155.140.171 "00:19:5b:ed:8b:d7 00:0b"  -string
+scope sw-12-007.lan addReservation 90.155.140.172 "00:19:5b:ed:8b:d7 00:0c"  -string
+scope sw-12-007.lan addReservation 90.155.140.173 "00:19:5b:ed:8b:d7 00:0d"  -string
+scope sw-12-007.lan addReservation 90.155.140.174 "00:19:5b:ed:8b:d7 00:0e"  -string
+scope sw-12-007.lan addReservation 90.155.140.175 "00:19:5b:ed:8b:d7 00:0f"  -string
+scope sw-12-007.lan addReservation 90.155.140.176 "00:19:5b:ed:8b:d7 00:10"  -string
+scope sw-12-007.lan addReservation 90.155.140.177 "00:19:5b:ed:8b:d7 00:11"  -string
+scope sw-12-007.lan addReservation 90.155.140.178 "00:19:5b:ed:8b:d7 00:12"  -string
+scope sw-12-007.lan addReservation 90.155.140.179 "00:19:5b:ed:8b:d7 00:13"  -string
+scope sw-12-007.lan addReservation 90.155.140.180 "00:19:5b:ed:8b:d7 00:14"  -string
+scope sw-12-007.lan addReservation 90.155.140.181 "00:19:5b:ed:8b:d7 00:15"  -string
+scope sw-12-007.lan addReservation 90.155.140.182 "00:19:5b:ed:8b:d7 00:16"  -string
+scope sw-12-007.lan addReservation 90.155.140.183 "00:19:5b:ed:8b:d7 00:17"  -string
+scope sw-12-007.lan addReservation 90.155.140.184 "00:19:5b:ed:8b:d7 00:18"  -string
+
+dhcp reload
+
+policy sw-12-008.lan  create
+policy sw-12-008.lan  set offer-timeout 60s
+policy sw-12-008.lan  set grace-period  0
+policy sw-12-008.lan  set use-client-id-for-reservations  on
+policy sw-12-008.lan  setOption routers 90.155.140.222
+policy sw-12-008.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-008.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.140.222 create
+client-class 90.155.140.222 set selection-criteria "sw-12-008.lan"
+client-class 90.155.140.222 set policy-name  sw-12-008.lan
+
+client-class 90.155.140.222 set host-name sw-12-001
+client-class 90.155.140.222 set domain-name vl_508 
+
+client-class 90.155.140.222  set client-lookup-id=@a.txt
+client-class 90.155.140.222  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-008.lan create 90.155.140.192 255.255.255.224
+scope sw-12-008.lan set policy  sw-12-008.lan
+scope sw-12-008.lan set selection-tag-list  "sw-12-008.lan"
+
+
+scope sw-12-008.lan addReservation 90.155.140.193 "00:11:95:81:d9:b1 00:01"  -string
+scope sw-12-008.lan addReservation 90.155.140.194 "00:11:95:81:d9:b1 00:02"  -string
+scope sw-12-008.lan addReservation 90.155.140.195 "00:11:95:81:d9:b1 00:03"  -string
+scope sw-12-008.lan addReservation 90.155.140.196 "00:11:95:81:d9:b1 00:04"  -string
+scope sw-12-008.lan addReservation 90.155.140.197 "00:11:95:81:d9:b1 00:05"  -string
+scope sw-12-008.lan addReservation 90.155.140.198 "00:11:95:81:d9:b1 00:06"  -string
+scope sw-12-008.lan addReservation 90.155.140.199 "00:11:95:81:d9:b1 00:07"  -string
+scope sw-12-008.lan addReservation 90.155.140.200 "00:11:95:81:d9:b1 00:08"  -string
+scope sw-12-008.lan addReservation 90.155.140.201 "00:11:95:81:d9:b1 00:09"  -string
+scope sw-12-008.lan addReservation 90.155.140.202 "00:11:95:81:d9:b1 00:0a"  -string
+scope sw-12-008.lan addReservation 90.155.140.203 "00:11:95:81:d9:b1 00:0b"  -string
+scope sw-12-008.lan addReservation 90.155.140.204 "00:11:95:81:d9:b1 00:0c"  -string
+scope sw-12-008.lan addReservation 90.155.140.205 "00:11:95:81:d9:b1 00:0d"  -string
+scope sw-12-008.lan addReservation 90.155.140.206 "00:11:95:81:d9:b1 00:0e"  -string
+scope sw-12-008.lan addReservation 90.155.140.207 "00:11:95:81:d9:b1 00:0f"  -string
+scope sw-12-008.lan addReservation 90.155.140.208 "00:11:95:81:d9:b1 00:10"  -string
+scope sw-12-008.lan addReservation 90.155.140.209 "00:11:95:81:d9:b1 00:11"  -string
+scope sw-12-008.lan addReservation 90.155.140.210 "00:11:95:81:d9:b1 00:12"  -string
+scope sw-12-008.lan addReservation 90.155.140.211 "00:11:95:81:d9:b1 00:13"  -string
+scope sw-12-008.lan addReservation 90.155.140.212 "00:11:95:81:d9:b1 00:14"  -string
+scope sw-12-008.lan addReservation 90.155.140.213 "00:11:95:81:d9:b1 00:15"  -string
+scope sw-12-008.lan addReservation 90.155.140.214 "00:11:95:81:d9:b1 00:16"  -string
+scope sw-12-008.lan addReservation 90.155.140.215 "00:11:95:81:d9:b1 00:17"  -string
+scope sw-12-008.lan addReservation 90.155.140.216 "00:11:95:81:d9:b1 00:18"  -string
+
+dhcp reload
+
+policy sw-12-009.lan  create
+policy sw-12-009.lan  set offer-timeout 60s
+policy sw-12-009.lan  set grace-period  0
+policy sw-12-009.lan  set use-client-id-for-reservations  on
+policy sw-12-009.lan  setOption routers 90.155.140.254
+policy sw-12-009.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-009.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.140.254 create
+client-class 90.155.140.254 set selection-criteria "sw-12-009.lan"
+client-class 90.155.140.254 set policy-name  sw-12-009.lan
+
+client-class 90.155.140.254 set host-name sw-12-001
+client-class 90.155.140.254 set domain-name vl_509 
+
+client-class 90.155.140.254  set client-lookup-id=@a.txt
+client-class 90.155.140.254  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-009.lan create 90.155.140.224 255.255.255.224
+scope sw-12-009.lan set policy  sw-12-009.lan
+scope sw-12-009.lan set selection-tag-list  "sw-12-009.lan"
+
+
+scope sw-12-009.lan addReservation 90.155.140.225 "00:11:95:81:d8:c9 00:01"  -string
+scope sw-12-009.lan addReservation 90.155.140.226 "00:11:95:81:d8:c9 00:02"  -string
+scope sw-12-009.lan addReservation 90.155.140.227 "00:11:95:81:d8:c9 00:03"  -string
+scope sw-12-009.lan addReservation 90.155.140.228 "00:11:95:81:d8:c9 00:04"  -string
+scope sw-12-009.lan addReservation 90.155.140.229 "00:11:95:81:d8:c9 00:05"  -string
+scope sw-12-009.lan addReservation 90.155.140.230 "00:11:95:81:d8:c9 00:06"  -string
+scope sw-12-009.lan addReservation 90.155.140.231 "00:11:95:81:d8:c9 00:07"  -string
+scope sw-12-009.lan addReservation 90.155.140.232 "00:11:95:81:d8:c9 00:08"  -string
+scope sw-12-009.lan addReservation 90.155.140.233 "00:11:95:81:d8:c9 00:09"  -string
+scope sw-12-009.lan addReservation 90.155.140.234 "00:11:95:81:d8:c9 00:0a"  -string
+scope sw-12-009.lan addReservation 90.155.140.235 "00:11:95:81:d8:c9 00:0b"  -string
+scope sw-12-009.lan addReservation 90.155.140.236 "00:11:95:81:d8:c9 00:0c"  -string
+scope sw-12-009.lan addReservation 90.155.140.237 "00:11:95:81:d8:c9 00:0d"  -string
+scope sw-12-009.lan addReservation 90.155.140.238 "00:11:95:81:d8:c9 00:0e"  -string
+scope sw-12-009.lan addReservation 90.155.140.239 "00:11:95:81:d8:c9 00:0f"  -string
+scope sw-12-009.lan addReservation 90.155.140.240 "00:11:95:81:d8:c9 00:10"  -string
+scope sw-12-009.lan addReservation 90.155.140.241 "00:11:95:81:d8:c9 00:11"  -string
+scope sw-12-009.lan addReservation 90.155.140.242 "00:11:95:81:d8:c9 00:12"  -string
+scope sw-12-009.lan addReservation 90.155.140.243 "00:11:95:81:d8:c9 00:13"  -string
+scope sw-12-009.lan addReservation 90.155.140.244 "00:11:95:81:d8:c9 00:14"  -string
+scope sw-12-009.lan addReservation 90.155.140.245 "00:11:95:81:d8:c9 00:15"  -string
+scope sw-12-009.lan addReservation 90.155.140.246 "00:11:95:81:d8:c9 00:16"  -string
+scope sw-12-009.lan addReservation 90.155.140.247 "00:11:95:81:d8:c9 00:17"  -string
+scope sw-12-009.lan addReservation 90.155.140.248 "00:11:95:81:d8:c9 00:18"  -string
+
+dhcp reload
+
+policy sw-12-010.lan  create
+policy sw-12-010.lan  set offer-timeout 60s
+policy sw-12-010.lan  set grace-period  0
+policy sw-12-010.lan  set use-client-id-for-reservations  on
+policy sw-12-010.lan  setOption routers 90.155.141.30
+policy sw-12-010.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-010.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.141.30 create
+client-class 90.155.141.30 set selection-criteria "sw-12-010.lan"
+client-class 90.155.141.30 set policy-name  sw-12-010.lan
+
+client-class 90.155.141.30 set host-name sw-12-001
+client-class 90.155.141.30 set domain-name vl_510 
+
+client-class 90.155.141.30  set client-lookup-id=@a.txt
+client-class 90.155.141.30  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-010.lan create 90.155.141.0 255.255.255.224
+scope sw-12-010.lan set policy  sw-12-010.lan
+scope sw-12-010.lan set selection-tag-list  "sw-12-010.lan"
+
+
+scope sw-12-010.lan addReservation 90.155.141.1 "00:11:95:81:da:34 00:01"  -string
+scope sw-12-010.lan addReservation 90.155.141.2 "00:11:95:81:da:34 00:02"  -string
+scope sw-12-010.lan addReservation 90.155.141.3 "00:11:95:81:da:34 00:03"  -string
+scope sw-12-010.lan addReservation 90.155.141.4 "00:11:95:81:da:34 00:04"  -string
+scope sw-12-010.lan addReservation 90.155.141.5 "00:11:95:81:da:34 00:05"  -string
+scope sw-12-010.lan addReservation 90.155.141.6 "00:11:95:81:da:34 00:06"  -string
+scope sw-12-010.lan addReservation 90.155.141.7 "00:11:95:81:da:34 00:07"  -string
+scope sw-12-010.lan addReservation 90.155.141.8 "00:11:95:81:da:34 00:08"  -string
+scope sw-12-010.lan addReservation 90.155.141.9 "00:11:95:81:da:34 00:09"  -string
+scope sw-12-010.lan addReservation 90.155.141.10 "00:11:95:81:da:34 00:0a"  -string
+scope sw-12-010.lan addReservation 90.155.141.11 "00:11:95:81:da:34 00:0b"  -string
+scope sw-12-010.lan addReservation 90.155.141.12 "00:11:95:81:da:34 00:0c"  -string
+scope sw-12-010.lan addReservation 90.155.141.13 "00:11:95:81:da:34 00:0d"  -string
+scope sw-12-010.lan addReservation 90.155.141.14 "00:11:95:81:da:34 00:0e"  -string
+scope sw-12-010.lan addReservation 90.155.141.15 "00:11:95:81:da:34 00:0f"  -string
+scope sw-12-010.lan addReservation 90.155.141.16 "00:11:95:81:da:34 00:10"  -string
+scope sw-12-010.lan addReservation 90.155.141.17 "00:11:95:81:da:34 00:11"  -string
+scope sw-12-010.lan addReservation 90.155.141.18 "00:11:95:81:da:34 00:12"  -string
+scope sw-12-010.lan addReservation 90.155.141.19 "00:11:95:81:da:34 00:13"  -string
+scope sw-12-010.lan addReservation 90.155.141.20 "00:11:95:81:da:34 00:14"  -string
+scope sw-12-010.lan addReservation 90.155.141.21 "00:11:95:81:da:34 00:15"  -string
+scope sw-12-010.lan addReservation 90.155.141.22 "00:11:95:81:da:34 00:16"  -string
+scope sw-12-010.lan addReservation 90.155.141.23 "00:11:95:81:da:34 00:17"  -string
+scope sw-12-010.lan addReservation 90.155.141.24 "00:11:95:81:da:34 00:18"  -string
+
+dhcp reload
+
+policy sw-12-011.lan  create
+policy sw-12-011.lan  set offer-timeout 60s
+policy sw-12-011.lan  set grace-period  0
+policy sw-12-011.lan  set use-client-id-for-reservations  on
+policy sw-12-011.lan  setOption routers 90.155.141.62
+policy sw-12-011.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-011.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.141.62 create
+client-class 90.155.141.62 set selection-criteria "sw-12-011.lan"
+client-class 90.155.141.62 set policy-name  sw-12-011.lan
+
+client-class 90.155.141.62 set host-name sw-12-001
+client-class 90.155.141.62 set domain-name vl_511 
+
+client-class 90.155.141.62  set client-lookup-id=@a.txt
+client-class 90.155.141.62  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-011.lan create 90.155.141.32 255.255.255.224
+scope sw-12-011.lan set policy  sw-12-011.lan
+scope sw-12-011.lan set selection-tag-list  "sw-12-011.lan"
+
+
+scope sw-12-011.lan addReservation 90.155.141.33 "00:11:95:81:24:58 00:01"  -string
+scope sw-12-011.lan addReservation 90.155.141.34 "00:11:95:81:24:58 00:02"  -string
+scope sw-12-011.lan addReservation 90.155.141.35 "00:11:95:81:24:58 00:03"  -string
+scope sw-12-011.lan addReservation 90.155.141.36 "00:11:95:81:24:58 00:04"  -string
+scope sw-12-011.lan addReservation 90.155.141.37 "00:11:95:81:24:58 00:05"  -string
+scope sw-12-011.lan addReservation 90.155.141.38 "00:11:95:81:24:58 00:06"  -string
+scope sw-12-011.lan addReservation 90.155.141.39 "00:11:95:81:24:58 00:07"  -string
+scope sw-12-011.lan addReservation 90.155.141.40 "00:11:95:81:24:58 00:08"  -string
+scope sw-12-011.lan addReservation 90.155.141.41 "00:11:95:81:24:58 00:09"  -string
+scope sw-12-011.lan addReservation 90.155.141.42 "00:11:95:81:24:58 00:0a"  -string
+scope sw-12-011.lan addReservation 90.155.141.43 "00:11:95:81:24:58 00:0b"  -string
+scope sw-12-011.lan addReservation 90.155.141.44 "00:11:95:81:24:58 00:0c"  -string
+scope sw-12-011.lan addReservation 90.155.141.45 "00:11:95:81:24:58 00:0d"  -string
+scope sw-12-011.lan addReservation 90.155.141.46 "00:11:95:81:24:58 00:0e"  -string
+scope sw-12-011.lan addReservation 90.155.141.47 "00:11:95:81:24:58 00:0f"  -string
+scope sw-12-011.lan addReservation 90.155.141.48 "00:11:95:81:24:58 00:10"  -string
+scope sw-12-011.lan addReservation 90.155.141.49 "00:11:95:81:24:58 00:11"  -string
+scope sw-12-011.lan addReservation 90.155.141.50 "00:11:95:81:24:58 00:12"  -string
+scope sw-12-011.lan addReservation 90.155.141.51 "00:11:95:81:24:58 00:13"  -string
+scope sw-12-011.lan addReservation 90.155.141.52 "00:11:95:81:24:58 00:14"  -string
+scope sw-12-011.lan addReservation 90.155.141.53 "00:11:95:81:24:58 00:15"  -string
+scope sw-12-011.lan addReservation 90.155.141.54 "00:11:95:81:24:58 00:16"  -string
+scope sw-12-011.lan addReservation 90.155.141.55 "00:11:95:81:24:58 00:17"  -string
+scope sw-12-011.lan addReservation 90.155.141.56 "00:11:95:81:24:58 00:18"  -string
+
+dhcp reload
+
+policy sw-12-012.lan  create
+policy sw-12-012.lan  set offer-timeout 60s
+policy sw-12-012.lan  set grace-period  0
+policy sw-12-012.lan  set use-client-id-for-reservations  on
+policy sw-12-012.lan  setOption routers 90.155.141.94
+policy sw-12-012.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-012.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.141.94 create
+client-class 90.155.141.94 set selection-criteria "sw-12-012.lan"
+client-class 90.155.141.94 set policy-name  sw-12-012.lan
+
+client-class 90.155.141.94 set host-name sw-12-001
+client-class 90.155.141.94 set domain-name vl_512 
+
+client-class 90.155.141.94  set client-lookup-id=@a.txt
+client-class 90.155.141.94  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-012.lan create 90.155.141.64 255.255.255.224
+scope sw-12-012.lan set policy  sw-12-012.lan
+scope sw-12-012.lan set selection-tag-list  "sw-12-012.lan"
+
+
+scope sw-12-012.lan addReservation 90.155.141.65 "00:11:95:81:d8:23 00:01"  -string
+scope sw-12-012.lan addReservation 90.155.141.66 "00:11:95:81:d8:23 00:02"  -string
+scope sw-12-012.lan addReservation 90.155.141.67 "00:11:95:81:d8:23 00:03"  -string
+scope sw-12-012.lan addReservation 90.155.141.68 "00:11:95:81:d8:23 00:04"  -string
+scope sw-12-012.lan addReservation 90.155.141.69 "00:11:95:81:d8:23 00:05"  -string
+scope sw-12-012.lan addReservation 90.155.141.70 "00:11:95:81:d8:23 00:06"  -string
+scope sw-12-012.lan addReservation 90.155.141.71 "00:11:95:81:d8:23 00:07"  -string
+scope sw-12-012.lan addReservation 90.155.141.72 "00:11:95:81:d8:23 00:08"  -string
+scope sw-12-012.lan addReservation 90.155.141.73 "00:11:95:81:d8:23 00:09"  -string
+scope sw-12-012.lan addReservation 90.155.141.74 "00:11:95:81:d8:23 00:0a"  -string
+scope sw-12-012.lan addReservation 90.155.141.75 "00:11:95:81:d8:23 00:0b"  -string
+scope sw-12-012.lan addReservation 90.155.141.76 "00:11:95:81:d8:23 00:0c"  -string
+scope sw-12-012.lan addReservation 90.155.141.77 "00:11:95:81:d8:23 00:0d"  -string
+scope sw-12-012.lan addReservation 90.155.141.78 "00:11:95:81:d8:23 00:0e"  -string
+scope sw-12-012.lan addReservation 90.155.141.79 "00:11:95:81:d8:23 00:0f"  -string
+scope sw-12-012.lan addReservation 90.155.141.80 "00:11:95:81:d8:23 00:10"  -string
+scope sw-12-012.lan addReservation 90.155.141.81 "00:11:95:81:d8:23 00:11"  -string
+scope sw-12-012.lan addReservation 90.155.141.82 "00:11:95:81:d8:23 00:12"  -string
+scope sw-12-012.lan addReservation 90.155.141.83 "00:11:95:81:d8:23 00:13"  -string
+scope sw-12-012.lan addReservation 90.155.141.84 "00:11:95:81:d8:23 00:14"  -string
+scope sw-12-012.lan addReservation 90.155.141.85 "00:11:95:81:d8:23 00:15"  -string
+scope sw-12-012.lan addReservation 90.155.141.86 "00:11:95:81:d8:23 00:16"  -string
+scope sw-12-012.lan addReservation 90.155.141.87 "00:11:95:81:d8:23 00:17"  -string
+scope sw-12-012.lan addReservation 90.155.141.88 "00:11:95:81:d8:23 00:18"  -string
+
+dhcp reload
+
+policy sw-12-013.lan  create
+policy sw-12-013.lan  set offer-timeout 60s
+policy sw-12-013.lan  set grace-period  0
+policy sw-12-013.lan  set use-client-id-for-reservations  on
+policy sw-12-013.lan  setOption routers 90.155.141.126
+policy sw-12-013.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-013.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.141.126 create
+client-class 90.155.141.126 set selection-criteria "sw-12-013.lan"
+client-class 90.155.141.126 set policy-name  sw-12-013.lan
+
+client-class 90.155.141.126 set host-name sw-12-001
+client-class 90.155.141.126 set domain-name vl_513 
+
+client-class 90.155.141.126  set client-lookup-id=@a.txt
+client-class 90.155.141.126  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-013.lan create 90.155.141.96 255.255.255.224
+scope sw-12-013.lan set policy  sw-12-013.lan
+scope sw-12-013.lan set selection-tag-list  "sw-12-013.lan"
+
+
+scope sw-12-013.lan addReservation 90.155.141.97 "00:11:95:fd:0b:7c 00:01"  -string
+scope sw-12-013.lan addReservation 90.155.141.98 "00:11:95:fd:0b:7c 00:02"  -string
+scope sw-12-013.lan addReservation 90.155.141.99 "00:11:95:fd:0b:7c 00:03"  -string
+scope sw-12-013.lan addReservation 90.155.141.100 "00:11:95:fd:0b:7c 00:04"  -string
+scope sw-12-013.lan addReservation 90.155.141.101 "00:11:95:fd:0b:7c 00:05"  -string
+scope sw-12-013.lan addReservation 90.155.141.102 "00:11:95:fd:0b:7c 00:06"  -string
+scope sw-12-013.lan addReservation 90.155.141.103 "00:11:95:fd:0b:7c 00:07"  -string
+scope sw-12-013.lan addReservation 90.155.141.104 "00:11:95:fd:0b:7c 00:08"  -string
+scope sw-12-013.lan addReservation 90.155.141.105 "00:11:95:fd:0b:7c 00:09"  -string
+scope sw-12-013.lan addReservation 90.155.141.106 "00:11:95:fd:0b:7c 00:0a"  -string
+scope sw-12-013.lan addReservation 90.155.141.107 "00:11:95:fd:0b:7c 00:0b"  -string
+scope sw-12-013.lan addReservation 90.155.141.108 "00:11:95:fd:0b:7c 00:0c"  -string
+scope sw-12-013.lan addReservation 90.155.141.109 "00:11:95:fd:0b:7c 00:0d"  -string
+scope sw-12-013.lan addReservation 90.155.141.110 "00:11:95:fd:0b:7c 00:0e"  -string
+scope sw-12-013.lan addReservation 90.155.141.111 "00:11:95:fd:0b:7c 00:0f"  -string
+scope sw-12-013.lan addReservation 90.155.141.112 "00:11:95:fd:0b:7c 00:10"  -string
+scope sw-12-013.lan addReservation 90.155.141.113 "00:11:95:fd:0b:7c 00:11"  -string
+scope sw-12-013.lan addReservation 90.155.141.114 "00:11:95:fd:0b:7c 00:12"  -string
+scope sw-12-013.lan addReservation 90.155.141.115 "00:11:95:fd:0b:7c 00:13"  -string
+scope sw-12-013.lan addReservation 90.155.141.116 "00:11:95:fd:0b:7c 00:14"  -string
+scope sw-12-013.lan addReservation 90.155.141.117 "00:11:95:fd:0b:7c 00:15"  -string
+scope sw-12-013.lan addReservation 90.155.141.118 "00:11:95:fd:0b:7c 00:16"  -string
+scope sw-12-013.lan addReservation 90.155.141.119 "00:11:95:fd:0b:7c 00:17"  -string
+scope sw-12-013.lan addReservation 90.155.141.120 "00:11:95:fd:0b:7c 00:18"  -string
+
+dhcp reload
+
+policy sw-12-014.lan  create
+policy sw-12-014.lan  set offer-timeout 60s
+policy sw-12-014.lan  set grace-period  0
+policy sw-12-014.lan  set use-client-id-for-reservations  on
+policy sw-12-014.lan  setOption routers 90.155.141.158
+policy sw-12-014.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-014.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.141.158 create
+client-class 90.155.141.158 set selection-criteria "sw-12-014.lan"
+client-class 90.155.141.158 set policy-name  sw-12-014.lan
+
+client-class 90.155.141.158 set host-name sw-12-001
+client-class 90.155.141.158 set domain-name vl_514 
+
+client-class 90.155.141.158  set client-lookup-id=@a.txt
+client-class 90.155.141.158  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-014.lan create 90.155.141.128 255.255.255.224
+scope sw-12-014.lan set policy  sw-12-014.lan
+scope sw-12-014.lan set selection-tag-list  "sw-12-014.lan"
+
+
+scope sw-12-014.lan addReservation 90.155.141.129 "00:11:95:fd:0b:7b 00:01"  -string
+scope sw-12-014.lan addReservation 90.155.141.130 "00:11:95:fd:0b:7b 00:02"  -string
+scope sw-12-014.lan addReservation 90.155.141.131 "00:11:95:fd:0b:7b 00:03"  -string
+scope sw-12-014.lan addReservation 90.155.141.132 "00:11:95:fd:0b:7b 00:04"  -string
+scope sw-12-014.lan addReservation 90.155.141.133 "00:11:95:fd:0b:7b 00:05"  -string
+scope sw-12-014.lan addReservation 90.155.141.134 "00:11:95:fd:0b:7b 00:06"  -string
+scope sw-12-014.lan addReservation 90.155.141.135 "00:11:95:fd:0b:7b 00:07"  -string
+scope sw-12-014.lan addReservation 90.155.141.136 "00:11:95:fd:0b:7b 00:08"  -string
+scope sw-12-014.lan addReservation 90.155.141.137 "00:11:95:fd:0b:7b 00:09"  -string
+scope sw-12-014.lan addReservation 90.155.141.138 "00:11:95:fd:0b:7b 00:0a"  -string
+scope sw-12-014.lan addReservation 90.155.141.139 "00:11:95:fd:0b:7b 00:0b"  -string
+scope sw-12-014.lan addReservation 90.155.141.140 "00:11:95:fd:0b:7b 00:0c"  -string
+scope sw-12-014.lan addReservation 90.155.141.141 "00:11:95:fd:0b:7b 00:0d"  -string
+scope sw-12-014.lan addReservation 90.155.141.142 "00:11:95:fd:0b:7b 00:0e"  -string
+scope sw-12-014.lan addReservation 90.155.141.143 "00:11:95:fd:0b:7b 00:0f"  -string
+scope sw-12-014.lan addReservation 90.155.141.144 "00:11:95:fd:0b:7b 00:10"  -string
+scope sw-12-014.lan addReservation 90.155.141.145 "00:11:95:fd:0b:7b 00:11"  -string
+scope sw-12-014.lan addReservation 90.155.141.146 "00:11:95:fd:0b:7b 00:12"  -string
+scope sw-12-014.lan addReservation 90.155.141.147 "00:11:95:fd:0b:7b 00:13"  -string
+scope sw-12-014.lan addReservation 90.155.141.148 "00:11:95:fd:0b:7b 00:14"  -string
+scope sw-12-014.lan addReservation 90.155.141.149 "00:11:95:fd:0b:7b 00:15"  -string
+scope sw-12-014.lan addReservation 90.155.141.150 "00:11:95:fd:0b:7b 00:16"  -string
+scope sw-12-014.lan addReservation 90.155.141.151 "00:11:95:fd:0b:7b 00:17"  -string
+scope sw-12-014.lan addReservation 90.155.141.152 "00:11:95:fd:0b:7b 00:18"  -string
+
+dhcp reload
+
+policy sw-12-015.lan  create
+policy sw-12-015.lan  set offer-timeout 60s
+policy sw-12-015.lan  set grace-period  0
+policy sw-12-015.lan  set use-client-id-for-reservations  on
+policy sw-12-015.lan  setOption routers 90.155.141.190
+policy sw-12-015.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-015.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.141.190 create
+client-class 90.155.141.190 set selection-criteria "sw-12-015.lan"
+client-class 90.155.141.190 set policy-name  sw-12-015.lan
+
+client-class 90.155.141.190 set host-name sw-12-001
+client-class 90.155.141.190 set domain-name vl_515 
+
+client-class 90.155.141.190  set client-lookup-id=@a.txt
+client-class 90.155.141.190  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-015.lan create 90.155.141.160 255.255.255.224
+scope sw-12-015.lan set policy  sw-12-015.lan
+scope sw-12-015.lan set selection-tag-list  "sw-12-015.lan"
+
+
+scope sw-12-015.lan addReservation 90.155.141.161 "00:11:95:fd:0b:7a 00:01"  -string
+scope sw-12-015.lan addReservation 90.155.141.162 "00:11:95:fd:0b:7a 00:02"  -string
+scope sw-12-015.lan addReservation 90.155.141.163 "00:11:95:fd:0b:7a 00:03"  -string
+scope sw-12-015.lan addReservation 90.155.141.164 "00:11:95:fd:0b:7a 00:04"  -string
+scope sw-12-015.lan addReservation 90.155.141.165 "00:11:95:fd:0b:7a 00:05"  -string
+scope sw-12-015.lan addReservation 90.155.141.166 "00:11:95:fd:0b:7a 00:06"  -string
+scope sw-12-015.lan addReservation 90.155.141.167 "00:11:95:fd:0b:7a 00:07"  -string
+scope sw-12-015.lan addReservation 90.155.141.168 "00:11:95:fd:0b:7a 00:08"  -string
+scope sw-12-015.lan addReservation 90.155.141.169 "00:11:95:fd:0b:7a 00:09"  -string
+scope sw-12-015.lan addReservation 90.155.141.170 "00:11:95:fd:0b:7a 00:0a"  -string
+scope sw-12-015.lan addReservation 90.155.141.171 "00:11:95:fd:0b:7a 00:0b"  -string
+scope sw-12-015.lan addReservation 90.155.141.172 "00:11:95:fd:0b:7a 00:0c"  -string
+scope sw-12-015.lan addReservation 90.155.141.173 "00:11:95:fd:0b:7a 00:0d"  -string
+scope sw-12-015.lan addReservation 90.155.141.174 "00:11:95:fd:0b:7a 00:0e"  -string
+scope sw-12-015.lan addReservation 90.155.141.175 "00:11:95:fd:0b:7a 00:0f"  -string
+scope sw-12-015.lan addReservation 90.155.141.176 "00:11:95:fd:0b:7a 00:10"  -string
+scope sw-12-015.lan addReservation 90.155.141.177 "00:11:95:fd:0b:7a 00:11"  -string
+scope sw-12-015.lan addReservation 90.155.141.178 "00:11:95:fd:0b:7a 00:12"  -string
+scope sw-12-015.lan addReservation 90.155.141.179 "00:11:95:fd:0b:7a 00:13"  -string
+scope sw-12-015.lan addReservation 90.155.141.180 "00:11:95:fd:0b:7a 00:14"  -string
+scope sw-12-015.lan addReservation 90.155.141.181 "00:11:95:fd:0b:7a 00:15"  -string
+scope sw-12-015.lan addReservation 90.155.141.182 "00:11:95:fd:0b:7a 00:16"  -string
+scope sw-12-015.lan addReservation 90.155.141.183 "00:11:95:fd:0b:7a 00:17"  -string
+scope sw-12-015.lan addReservation 90.155.141.184 "00:11:95:fd:0b:7a 00:18"  -string
+
+dhcp reload
+
+policy sw-12-016.lan  create
+policy sw-12-016.lan  set offer-timeout 60s
+policy sw-12-016.lan  set grace-period  0
+policy sw-12-016.lan  set use-client-id-for-reservations  on
+policy sw-12-016.lan  setOption routers 90.155.141.222
+policy sw-12-016.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-016.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.141.222 create
+client-class 90.155.141.222 set selection-criteria "sw-12-016.lan"
+client-class 90.155.141.222 set policy-name  sw-12-016.lan
+
+client-class 90.155.141.222 set host-name sw-12-001
+client-class 90.155.141.222 set domain-name vl_516 
+
+client-class 90.155.141.222  set client-lookup-id=@a.txt
+client-class 90.155.141.222  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-016.lan create 90.155.141.192 255.255.255.224
+scope sw-12-016.lan set policy  sw-12-016.lan
+scope sw-12-016.lan set selection-tag-list  "sw-12-016.lan"
+
+
+scope sw-12-016.lan addReservation 90.155.141.193 "00:17:9a:b3:68:84 00:01"  -string
+scope sw-12-016.lan addReservation 90.155.141.194 "00:17:9a:b3:68:84 00:02"  -string
+scope sw-12-016.lan addReservation 90.155.141.195 "00:17:9a:b3:68:84 00:03"  -string
+scope sw-12-016.lan addReservation 90.155.141.196 "00:17:9a:b3:68:84 00:04"  -string
+scope sw-12-016.lan addReservation 90.155.141.197 "00:17:9a:b3:68:84 00:05"  -string
+scope sw-12-016.lan addReservation 90.155.141.198 "00:17:9a:b3:68:84 00:06"  -string
+scope sw-12-016.lan addReservation 90.155.141.199 "00:17:9a:b3:68:84 00:07"  -string
+scope sw-12-016.lan addReservation 90.155.141.200 "00:17:9a:b3:68:84 00:08"  -string
+scope sw-12-016.lan addReservation 90.155.141.201 "00:17:9a:b3:68:84 00:09"  -string
+scope sw-12-016.lan addReservation 90.155.141.202 "00:17:9a:b3:68:84 00:0a"  -string
+scope sw-12-016.lan addReservation 90.155.141.203 "00:17:9a:b3:68:84 00:0b"  -string
+scope sw-12-016.lan addReservation 90.155.141.204 "00:17:9a:b3:68:84 00:0c"  -string
+scope sw-12-016.lan addReservation 90.155.141.205 "00:17:9a:b3:68:84 00:0d"  -string
+scope sw-12-016.lan addReservation 90.155.141.206 "00:17:9a:b3:68:84 00:0e"  -string
+scope sw-12-016.lan addReservation 90.155.141.207 "00:17:9a:b3:68:84 00:0f"  -string
+scope sw-12-016.lan addReservation 90.155.141.208 "00:17:9a:b3:68:84 00:10"  -string
+scope sw-12-016.lan addReservation 90.155.141.209 "00:17:9a:b3:68:84 00:11"  -string
+scope sw-12-016.lan addReservation 90.155.141.210 "00:17:9a:b3:68:84 00:12"  -string
+scope sw-12-016.lan addReservation 90.155.141.211 "00:17:9a:b3:68:84 00:13"  -string
+scope sw-12-016.lan addReservation 90.155.141.212 "00:17:9a:b3:68:84 00:14"  -string
+scope sw-12-016.lan addReservation 90.155.141.213 "00:17:9a:b3:68:84 00:15"  -string
+scope sw-12-016.lan addReservation 90.155.141.214 "00:17:9a:b3:68:84 00:16"  -string
+scope sw-12-016.lan addReservation 90.155.141.215 "00:17:9a:b3:68:84 00:17"  -string
+scope sw-12-016.lan addReservation 90.155.141.216 "00:17:9a:b3:68:84 00:18"  -string
+
+dhcp reload
+
+policy sw-12-017.lan  create
+policy sw-12-017.lan  set offer-timeout 60s
+policy sw-12-017.lan  set grace-period  0
+policy sw-12-017.lan  set use-client-id-for-reservations  on
+policy sw-12-017.lan  setOption routers 90.155.141.254
+policy sw-12-017.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-017.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.141.254 create
+client-class 90.155.141.254 set selection-criteria "sw-12-017.lan"
+client-class 90.155.141.254 set policy-name  sw-12-017.lan
+
+client-class 90.155.141.254 set host-name sw-12-001
+client-class 90.155.141.254 set domain-name vl_517 
+
+client-class 90.155.141.254  set client-lookup-id=@a.txt
+client-class 90.155.141.254  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-017.lan create 90.155.141.224 255.255.255.224
+scope sw-12-017.lan set policy  sw-12-017.lan
+scope sw-12-017.lan set selection-tag-list  "sw-12-017.lan"
+
+
+scope sw-12-017.lan addReservation 90.155.141.225 "00:1b:11:b8:d0:06 00:01"  -string
+scope sw-12-017.lan addReservation 90.155.141.226 "00:1b:11:b8:d0:06 00:02"  -string
+scope sw-12-017.lan addReservation 90.155.141.227 "00:1b:11:b8:d0:06 00:03"  -string
+scope sw-12-017.lan addReservation 90.155.141.228 "00:1b:11:b8:d0:06 00:04"  -string
+scope sw-12-017.lan addReservation 90.155.141.229 "00:1b:11:b8:d0:06 00:05"  -string
+scope sw-12-017.lan addReservation 90.155.141.230 "00:1b:11:b8:d0:06 00:06"  -string
+scope sw-12-017.lan addReservation 90.155.141.231 "00:1b:11:b8:d0:06 00:07"  -string
+scope sw-12-017.lan addReservation 90.155.141.232 "00:1b:11:b8:d0:06 00:08"  -string
+scope sw-12-017.lan addReservation 90.155.141.233 "00:1b:11:b8:d0:06 00:09"  -string
+scope sw-12-017.lan addReservation 90.155.141.234 "00:1b:11:b8:d0:06 00:0a"  -string
+scope sw-12-017.lan addReservation 90.155.141.235 "00:1b:11:b8:d0:06 00:0b"  -string
+scope sw-12-017.lan addReservation 90.155.141.236 "00:1b:11:b8:d0:06 00:0c"  -string
+scope sw-12-017.lan addReservation 90.155.141.237 "00:1b:11:b8:d0:06 00:0d"  -string
+scope sw-12-017.lan addReservation 90.155.141.238 "00:1b:11:b8:d0:06 00:0e"  -string
+scope sw-12-017.lan addReservation 90.155.141.239 "00:1b:11:b8:d0:06 00:0f"  -string
+scope sw-12-017.lan addReservation 90.155.141.240 "00:1b:11:b8:d0:06 00:10"  -string
+scope sw-12-017.lan addReservation 90.155.141.241 "00:1b:11:b8:d0:06 00:11"  -string
+scope sw-12-017.lan addReservation 90.155.141.242 "00:1b:11:b8:d0:06 00:12"  -string
+scope sw-12-017.lan addReservation 90.155.141.243 "00:1b:11:b8:d0:06 00:13"  -string
+scope sw-12-017.lan addReservation 90.155.141.244 "00:1b:11:b8:d0:06 00:14"  -string
+scope sw-12-017.lan addReservation 90.155.141.245 "00:1b:11:b8:d0:06 00:15"  -string
+scope sw-12-017.lan addReservation 90.155.141.246 "00:1b:11:b8:d0:06 00:16"  -string
+scope sw-12-017.lan addReservation 90.155.141.247 "00:1b:11:b8:d0:06 00:17"  -string
+scope sw-12-017.lan addReservation 90.155.141.248 "00:1b:11:b8:d0:06 00:18"  -string
+
+dhcp reload
+
+policy sw-12-018.lan  create
+policy sw-12-018.lan  set offer-timeout 60s
+policy sw-12-018.lan  set grace-period  0
+policy sw-12-018.lan  set use-client-id-for-reservations  on
+policy sw-12-018.lan  setOption routers 90.155.142.30
+policy sw-12-018.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-018.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.142.30 create
+client-class 90.155.142.30 set selection-criteria "sw-12-018.lan"
+client-class 90.155.142.30 set policy-name  sw-12-018.lan
+
+client-class 90.155.142.30 set host-name sw-12-001
+client-class 90.155.142.30 set domain-name vl_518 
+
+client-class 90.155.142.30  set client-lookup-id=@a.txt
+client-class 90.155.142.30  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-018.lan create 90.155.142.0 255.255.255.224
+scope sw-12-018.lan set policy  sw-12-018.lan
+scope sw-12-018.lan set selection-tag-list  "sw-12-018.lan"
+
+
+scope sw-12-018.lan addReservation 90.155.142.1 "00:11:95:f3:ab:d5 00:01"  -string
+scope sw-12-018.lan addReservation 90.155.142.2 "00:11:95:f3:ab:d5 00:02"  -string
+scope sw-12-018.lan addReservation 90.155.142.3 "00:11:95:f3:ab:d5 00:03"  -string
+scope sw-12-018.lan addReservation 90.155.142.4 "00:11:95:f3:ab:d5 00:04"  -string
+scope sw-12-018.lan addReservation 90.155.142.5 "00:11:95:f3:ab:d5 00:05"  -string
+scope sw-12-018.lan addReservation 90.155.142.6 "00:11:95:f3:ab:d5 00:06"  -string
+scope sw-12-018.lan addReservation 90.155.142.7 "00:11:95:f3:ab:d5 00:07"  -string
+scope sw-12-018.lan addReservation 90.155.142.8 "00:11:95:f3:ab:d5 00:08"  -string
+scope sw-12-018.lan addReservation 90.155.142.9 "00:11:95:f3:ab:d5 00:09"  -string
+scope sw-12-018.lan addReservation 90.155.142.10 "00:11:95:f3:ab:d5 00:0a"  -string
+scope sw-12-018.lan addReservation 90.155.142.11 "00:11:95:f3:ab:d5 00:0b"  -string
+scope sw-12-018.lan addReservation 90.155.142.12 "00:11:95:f3:ab:d5 00:0c"  -string
+scope sw-12-018.lan addReservation 90.155.142.13 "00:11:95:f3:ab:d5 00:0d"  -string
+scope sw-12-018.lan addReservation 90.155.142.14 "00:11:95:f3:ab:d5 00:0e"  -string
+scope sw-12-018.lan addReservation 90.155.142.15 "00:11:95:f3:ab:d5 00:0f"  -string
+scope sw-12-018.lan addReservation 90.155.142.16 "00:11:95:f3:ab:d5 00:10"  -string
+scope sw-12-018.lan addReservation 90.155.142.17 "00:11:95:f3:ab:d5 00:11"  -string
+scope sw-12-018.lan addReservation 90.155.142.18 "00:11:95:f3:ab:d5 00:12"  -string
+scope sw-12-018.lan addReservation 90.155.142.19 "00:11:95:f3:ab:d5 00:13"  -string
+scope sw-12-018.lan addReservation 90.155.142.20 "00:11:95:f3:ab:d5 00:14"  -string
+scope sw-12-018.lan addReservation 90.155.142.21 "00:11:95:f3:ab:d5 00:15"  -string
+scope sw-12-018.lan addReservation 90.155.142.22 "00:11:95:f3:ab:d5 00:16"  -string
+scope sw-12-018.lan addReservation 90.155.142.23 "00:11:95:f3:ab:d5 00:17"  -string
+scope sw-12-018.lan addReservation 90.155.142.24 "00:11:95:f3:ab:d5 00:18"  -string
+
+dhcp reload
+
+policy sw-12-019.lan  create
+policy sw-12-019.lan  set offer-timeout 60s
+policy sw-12-019.lan  set grace-period  0
+policy sw-12-019.lan  set use-client-id-for-reservations  on
+policy sw-12-019.lan  setOption routers 90.155.142.62
+policy sw-12-019.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-019.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.142.62 create
+client-class 90.155.142.62 set selection-criteria "sw-12-019.lan"
+client-class 90.155.142.62 set policy-name  sw-12-019.lan
+
+client-class 90.155.142.62 set host-name sw-12-001
+client-class 90.155.142.62 set domain-name vl_519 
+
+client-class 90.155.142.62  set client-lookup-id=@a.txt
+client-class 90.155.142.62  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-019.lan create 90.155.142.32 255.255.255.224
+scope sw-12-019.lan set policy  sw-12-019.lan
+scope sw-12-019.lan set selection-tag-list  "sw-12-019.lan"
+
+
+scope sw-12-019.lan addReservation 90.155.142.33 "00:11:95:f3:ac:aa 00:01"  -string
+scope sw-12-019.lan addReservation 90.155.142.34 "00:11:95:f3:ac:aa 00:02"  -string
+scope sw-12-019.lan addReservation 90.155.142.35 "00:11:95:f3:ac:aa 00:03"  -string
+scope sw-12-019.lan addReservation 90.155.142.36 "00:11:95:f3:ac:aa 00:04"  -string
+scope sw-12-019.lan addReservation 90.155.142.37 "00:11:95:f3:ac:aa 00:05"  -string
+scope sw-12-019.lan addReservation 90.155.142.38 "00:11:95:f3:ac:aa 00:06"  -string
+scope sw-12-019.lan addReservation 90.155.142.39 "00:11:95:f3:ac:aa 00:07"  -string
+scope sw-12-019.lan addReservation 90.155.142.40 "00:11:95:f3:ac:aa 00:08"  -string
+scope sw-12-019.lan addReservation 90.155.142.41 "00:11:95:f3:ac:aa 00:09"  -string
+scope sw-12-019.lan addReservation 90.155.142.42 "00:11:95:f3:ac:aa 00:0a"  -string
+scope sw-12-019.lan addReservation 90.155.142.43 "00:11:95:f3:ac:aa 00:0b"  -string
+scope sw-12-019.lan addReservation 90.155.142.44 "00:11:95:f3:ac:aa 00:0c"  -string
+scope sw-12-019.lan addReservation 90.155.142.45 "00:11:95:f3:ac:aa 00:0d"  -string
+scope sw-12-019.lan addReservation 90.155.142.46 "00:11:95:f3:ac:aa 00:0e"  -string
+scope sw-12-019.lan addReservation 90.155.142.47 "00:11:95:f3:ac:aa 00:0f"  -string
+scope sw-12-019.lan addReservation 90.155.142.48 "00:11:95:f3:ac:aa 00:10"  -string
+scope sw-12-019.lan addReservation 90.155.142.49 "00:11:95:f3:ac:aa 00:11"  -string
+scope sw-12-019.lan addReservation 90.155.142.50 "00:11:95:f3:ac:aa 00:12"  -string
+scope sw-12-019.lan addReservation 90.155.142.51 "00:11:95:f3:ac:aa 00:13"  -string
+scope sw-12-019.lan addReservation 90.155.142.52 "00:11:95:f3:ac:aa 00:14"  -string
+scope sw-12-019.lan addReservation 90.155.142.53 "00:11:95:f3:ac:aa 00:15"  -string
+scope sw-12-019.lan addReservation 90.155.142.54 "00:11:95:f3:ac:aa 00:16"  -string
+scope sw-12-019.lan addReservation 90.155.142.55 "00:11:95:f3:ac:aa 00:17"  -string
+scope sw-12-019.lan addReservation 90.155.142.56 "00:11:95:f3:ac:aa 00:18"  -string
+
+dhcp reload
+
+policy sw-12-020.lan  create
+policy sw-12-020.lan  set offer-timeout 60s
+policy sw-12-020.lan  set grace-period  0
+policy sw-12-020.lan  set use-client-id-for-reservations  on
+policy sw-12-020.lan  setOption routers 90.155.142.94
+policy sw-12-020.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-020.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.142.94 create
+client-class 90.155.142.94 set selection-criteria "sw-12-020.lan"
+client-class 90.155.142.94 set policy-name  sw-12-020.lan
+
+client-class 90.155.142.94 set host-name sw-12-001
+client-class 90.155.142.94 set domain-name vl_520 
+
+client-class 90.155.142.94  set client-lookup-id=@a.txt
+client-class 90.155.142.94  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-020.lan create 90.155.142.64 255.255.255.224
+scope sw-12-020.lan set policy  sw-12-020.lan
+scope sw-12-020.lan set selection-tag-list  "sw-12-020.lan"
+
+
+scope sw-12-020.lan addReservation 90.155.142.65 "00:11:95:f4:6e:eb 00:01"  -string
+scope sw-12-020.lan addReservation 90.155.142.66 "00:11:95:f4:6e:eb 00:02"  -string
+scope sw-12-020.lan addReservation 90.155.142.67 "00:11:95:f4:6e:eb 00:03"  -string
+scope sw-12-020.lan addReservation 90.155.142.68 "00:11:95:f4:6e:eb 00:04"  -string
+scope sw-12-020.lan addReservation 90.155.142.69 "00:11:95:f4:6e:eb 00:05"  -string
+scope sw-12-020.lan addReservation 90.155.142.70 "00:11:95:f4:6e:eb 00:06"  -string
+scope sw-12-020.lan addReservation 90.155.142.71 "00:11:95:f4:6e:eb 00:07"  -string
+scope sw-12-020.lan addReservation 90.155.142.72 "00:11:95:f4:6e:eb 00:08"  -string
+scope sw-12-020.lan addReservation 90.155.142.73 "00:11:95:f4:6e:eb 00:09"  -string
+scope sw-12-020.lan addReservation 90.155.142.74 "00:11:95:f4:6e:eb 00:0a"  -string
+scope sw-12-020.lan addReservation 90.155.142.75 "00:11:95:f4:6e:eb 00:0b"  -string
+scope sw-12-020.lan addReservation 90.155.142.76 "00:11:95:f4:6e:eb 00:0c"  -string
+scope sw-12-020.lan addReservation 90.155.142.77 "00:11:95:f4:6e:eb 00:0d"  -string
+scope sw-12-020.lan addReservation 90.155.142.78 "00:11:95:f4:6e:eb 00:0e"  -string
+scope sw-12-020.lan addReservation 90.155.142.79 "00:11:95:f4:6e:eb 00:0f"  -string
+scope sw-12-020.lan addReservation 90.155.142.80 "00:11:95:f4:6e:eb 00:10"  -string
+scope sw-12-020.lan addReservation 90.155.142.81 "00:11:95:f4:6e:eb 00:11"  -string
+scope sw-12-020.lan addReservation 90.155.142.82 "00:11:95:f4:6e:eb 00:12"  -string
+scope sw-12-020.lan addReservation 90.155.142.83 "00:11:95:f4:6e:eb 00:13"  -string
+scope sw-12-020.lan addReservation 90.155.142.84 "00:11:95:f4:6e:eb 00:14"  -string
+scope sw-12-020.lan addReservation 90.155.142.85 "00:11:95:f4:6e:eb 00:15"  -string
+scope sw-12-020.lan addReservation 90.155.142.86 "00:11:95:f4:6e:eb 00:16"  -string
+scope sw-12-020.lan addReservation 90.155.142.87 "00:11:95:f4:6e:eb 00:17"  -string
+scope sw-12-020.lan addReservation 90.155.142.88 "00:11:95:f4:6e:eb 00:18"  -string
+
+dhcp reload
+
+policy sw-12-021.lan  create
+policy sw-12-021.lan  set offer-timeout 60s
+policy sw-12-021.lan  set grace-period  0
+policy sw-12-021.lan  set use-client-id-for-reservations  on
+policy sw-12-021.lan  setOption routers 90.155.142.126
+policy sw-12-021.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-021.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.142.126 create
+client-class 90.155.142.126 set selection-criteria "sw-12-021.lan"
+client-class 90.155.142.126 set policy-name  sw-12-021.lan
+
+client-class 90.155.142.126 set host-name sw-12-001
+client-class 90.155.142.126 set domain-name vl_521 
+
+client-class 90.155.142.126  set client-lookup-id=@a.txt
+client-class 90.155.142.126  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-021.lan create 90.155.142.96 255.255.255.224
+scope sw-12-021.lan set policy  sw-12-021.lan
+scope sw-12-021.lan set selection-tag-list  "sw-12-021.lan"
+
+
+scope sw-12-021.lan addReservation 90.155.142.97 "00:11:95:f3:ab:ae 00:01"  -string
+scope sw-12-021.lan addReservation 90.155.142.98 "00:11:95:f3:ab:ae 00:02"  -string
+scope sw-12-021.lan addReservation 90.155.142.99 "00:11:95:f3:ab:ae 00:03"  -string
+scope sw-12-021.lan addReservation 90.155.142.100 "00:11:95:f3:ab:ae 00:04"  -string
+scope sw-12-021.lan addReservation 90.155.142.101 "00:11:95:f3:ab:ae 00:05"  -string
+scope sw-12-021.lan addReservation 90.155.142.102 "00:11:95:f3:ab:ae 00:06"  -string
+scope sw-12-021.lan addReservation 90.155.142.103 "00:11:95:f3:ab:ae 00:07"  -string
+scope sw-12-021.lan addReservation 90.155.142.104 "00:11:95:f3:ab:ae 00:08"  -string
+scope sw-12-021.lan addReservation 90.155.142.105 "00:11:95:f3:ab:ae 00:09"  -string
+scope sw-12-021.lan addReservation 90.155.142.106 "00:11:95:f3:ab:ae 00:0a"  -string
+scope sw-12-021.lan addReservation 90.155.142.107 "00:11:95:f3:ab:ae 00:0b"  -string
+scope sw-12-021.lan addReservation 90.155.142.108 "00:11:95:f3:ab:ae 00:0c"  -string
+scope sw-12-021.lan addReservation 90.155.142.109 "00:11:95:f3:ab:ae 00:0d"  -string
+scope sw-12-021.lan addReservation 90.155.142.110 "00:11:95:f3:ab:ae 00:0e"  -string
+scope sw-12-021.lan addReservation 90.155.142.111 "00:11:95:f3:ab:ae 00:0f"  -string
+scope sw-12-021.lan addReservation 90.155.142.112 "00:11:95:f3:ab:ae 00:10"  -string
+scope sw-12-021.lan addReservation 90.155.142.113 "00:11:95:f3:ab:ae 00:11"  -string
+scope sw-12-021.lan addReservation 90.155.142.114 "00:11:95:f3:ab:ae 00:12"  -string
+scope sw-12-021.lan addReservation 90.155.142.115 "00:11:95:f3:ab:ae 00:13"  -string
+scope sw-12-021.lan addReservation 90.155.142.116 "00:11:95:f3:ab:ae 00:14"  -string
+scope sw-12-021.lan addReservation 90.155.142.117 "00:11:95:f3:ab:ae 00:15"  -string
+scope sw-12-021.lan addReservation 90.155.142.118 "00:11:95:f3:ab:ae 00:16"  -string
+scope sw-12-021.lan addReservation 90.155.142.119 "00:11:95:f3:ab:ae 00:17"  -string
+scope sw-12-021.lan addReservation 90.155.142.120 "00:11:95:f3:ab:ae 00:18"  -string
+
+dhcp reload
+
+policy sw-12-022.lan  create
+policy sw-12-022.lan  set offer-timeout 60s
+policy sw-12-022.lan  set grace-period  0
+policy sw-12-022.lan  set use-client-id-for-reservations  on
+policy sw-12-022.lan  setOption routers 90.155.142.158
+policy sw-12-022.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-022.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.142.158 create
+client-class 90.155.142.158 set selection-criteria "sw-12-022.lan"
+client-class 90.155.142.158 set policy-name  sw-12-022.lan
+
+client-class 90.155.142.158 set host-name sw-12-001
+client-class 90.155.142.158 set domain-name vl_522 
+
+client-class 90.155.142.158  set client-lookup-id=@a.txt
+client-class 90.155.142.158  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-022.lan create 90.155.142.128 255.255.255.224
+scope sw-12-022.lan set policy  sw-12-022.lan
+scope sw-12-022.lan set selection-tag-list  "sw-12-022.lan"
+
+
+scope sw-12-022.lan addReservation 90.155.142.129 "00:17:9a:bc:a3:da 00:01"  -string
+scope sw-12-022.lan addReservation 90.155.142.130 "00:17:9a:bc:a3:da 00:02"  -string
+scope sw-12-022.lan addReservation 90.155.142.131 "00:17:9a:bc:a3:da 00:03"  -string
+scope sw-12-022.lan addReservation 90.155.142.132 "00:17:9a:bc:a3:da 00:04"  -string
+scope sw-12-022.lan addReservation 90.155.142.133 "00:17:9a:bc:a3:da 00:05"  -string
+scope sw-12-022.lan addReservation 90.155.142.134 "00:17:9a:bc:a3:da 00:06"  -string
+scope sw-12-022.lan addReservation 90.155.142.135 "00:17:9a:bc:a3:da 00:07"  -string
+scope sw-12-022.lan addReservation 90.155.142.136 "00:17:9a:bc:a3:da 00:08"  -string
+scope sw-12-022.lan addReservation 90.155.142.137 "00:17:9a:bc:a3:da 00:09"  -string
+scope sw-12-022.lan addReservation 90.155.142.138 "00:17:9a:bc:a3:da 00:0a"  -string
+scope sw-12-022.lan addReservation 90.155.142.139 "00:17:9a:bc:a3:da 00:0b"  -string
+scope sw-12-022.lan addReservation 90.155.142.140 "00:17:9a:bc:a3:da 00:0c"  -string
+scope sw-12-022.lan addReservation 90.155.142.141 "00:17:9a:bc:a3:da 00:0d"  -string
+scope sw-12-022.lan addReservation 90.155.142.142 "00:17:9a:bc:a3:da 00:0e"  -string
+scope sw-12-022.lan addReservation 90.155.142.143 "00:17:9a:bc:a3:da 00:0f"  -string
+scope sw-12-022.lan addReservation 90.155.142.144 "00:17:9a:bc:a3:da 00:10"  -string
+scope sw-12-022.lan addReservation 90.155.142.145 "00:17:9a:bc:a3:da 00:11"  -string
+scope sw-12-022.lan addReservation 90.155.142.146 "00:17:9a:bc:a3:da 00:12"  -string
+scope sw-12-022.lan addReservation 90.155.142.147 "00:17:9a:bc:a3:da 00:13"  -string
+scope sw-12-022.lan addReservation 90.155.142.148 "00:17:9a:bc:a3:da 00:14"  -string
+scope sw-12-022.lan addReservation 90.155.142.149 "00:17:9a:bc:a3:da 00:15"  -string
+scope sw-12-022.lan addReservation 90.155.142.150 "00:17:9a:bc:a3:da 00:16"  -string
+scope sw-12-022.lan addReservation 90.155.142.151 "00:17:9a:bc:a3:da 00:17"  -string
+scope sw-12-022.lan addReservation 90.155.142.152 "00:17:9a:bc:a3:da 00:18"  -string
+
+dhcp reload
+
+policy sw-12-023.lan  create
+policy sw-12-023.lan  set offer-timeout 60s
+policy sw-12-023.lan  set grace-period  0
+policy sw-12-023.lan  set use-client-id-for-reservations  on
+policy sw-12-023.lan  setOption routers 90.155.142.190
+policy sw-12-023.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-023.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.142.190 create
+client-class 90.155.142.190 set selection-criteria "sw-12-023.lan"
+client-class 90.155.142.190 set policy-name  sw-12-023.lan
+
+client-class 90.155.142.190 set host-name sw-12-001
+client-class 90.155.142.190 set domain-name vl_523 
+
+client-class 90.155.142.190  set client-lookup-id=@a.txt
+client-class 90.155.142.190  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-023.lan create 90.155.142.160 255.255.255.224
+scope sw-12-023.lan set policy  sw-12-023.lan
+scope sw-12-023.lan set selection-tag-list  "sw-12-023.lan"
+
+
+scope sw-12-023.lan addReservation 90.155.142.161 "00:15:e9:ac:d6:a3 00:01"  -string
+scope sw-12-023.lan addReservation 90.155.142.162 "00:15:e9:ac:d6:a3 00:02"  -string
+scope sw-12-023.lan addReservation 90.155.142.163 "00:15:e9:ac:d6:a3 00:03"  -string
+scope sw-12-023.lan addReservation 90.155.142.164 "00:15:e9:ac:d6:a3 00:04"  -string
+scope sw-12-023.lan addReservation 90.155.142.165 "00:15:e9:ac:d6:a3 00:05"  -string
+scope sw-12-023.lan addReservation 90.155.142.166 "00:15:e9:ac:d6:a3 00:06"  -string
+scope sw-12-023.lan addReservation 90.155.142.167 "00:15:e9:ac:d6:a3 00:07"  -string
+scope sw-12-023.lan addReservation 90.155.142.168 "00:15:e9:ac:d6:a3 00:08"  -string
+scope sw-12-023.lan addReservation 90.155.142.169 "00:15:e9:ac:d6:a3 00:09"  -string
+scope sw-12-023.lan addReservation 90.155.142.170 "00:15:e9:ac:d6:a3 00:0a"  -string
+scope sw-12-023.lan addReservation 90.155.142.171 "00:15:e9:ac:d6:a3 00:0b"  -string
+scope sw-12-023.lan addReservation 90.155.142.172 "00:15:e9:ac:d6:a3 00:0c"  -string
+scope sw-12-023.lan addReservation 90.155.142.173 "00:15:e9:ac:d6:a3 00:0d"  -string
+scope sw-12-023.lan addReservation 90.155.142.174 "00:15:e9:ac:d6:a3 00:0e"  -string
+scope sw-12-023.lan addReservation 90.155.142.175 "00:15:e9:ac:d6:a3 00:0f"  -string
+scope sw-12-023.lan addReservation 90.155.142.176 "00:15:e9:ac:d6:a3 00:10"  -string
+scope sw-12-023.lan addReservation 90.155.142.177 "00:15:e9:ac:d6:a3 00:11"  -string
+scope sw-12-023.lan addReservation 90.155.142.178 "00:15:e9:ac:d6:a3 00:12"  -string
+scope sw-12-023.lan addReservation 90.155.142.179 "00:15:e9:ac:d6:a3 00:13"  -string
+scope sw-12-023.lan addReservation 90.155.142.180 "00:15:e9:ac:d6:a3 00:14"  -string
+scope sw-12-023.lan addReservation 90.155.142.181 "00:15:e9:ac:d6:a3 00:15"  -string
+scope sw-12-023.lan addReservation 90.155.142.182 "00:15:e9:ac:d6:a3 00:16"  -string
+scope sw-12-023.lan addReservation 90.155.142.183 "00:15:e9:ac:d6:a3 00:17"  -string
+scope sw-12-023.lan addReservation 90.155.142.184 "00:15:e9:ac:d6:a3 00:18"  -string
+
+dhcp reload
+
+policy sw-12-024.lan  create
+policy sw-12-024.lan  set offer-timeout 60s
+policy sw-12-024.lan  set grace-period  0
+policy sw-12-024.lan  set use-client-id-for-reservations  on
+policy sw-12-024.lan  setOption routers 90.155.142.222
+policy sw-12-024.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-024.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.142.222 create
+client-class 90.155.142.222 set selection-criteria "sw-12-024.lan"
+client-class 90.155.142.222 set policy-name  sw-12-024.lan
+
+client-class 90.155.142.222 set host-name sw-12-001
+client-class 90.155.142.222 set domain-name vl_524 
+
+client-class 90.155.142.222  set client-lookup-id=@a.txt
+client-class 90.155.142.222  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-024.lan create 90.155.142.192 255.255.255.224
+scope sw-12-024.lan set policy  sw-12-024.lan
+scope sw-12-024.lan set selection-tag-list  "sw-12-024.lan"
+
+
+scope sw-12-024.lan addReservation 90.155.142.193 "00:17:9a:7a:7c:80 00:01"  -string
+scope sw-12-024.lan addReservation 90.155.142.194 "00:17:9a:7a:7c:80 00:02"  -string
+scope sw-12-024.lan addReservation 90.155.142.195 "00:17:9a:7a:7c:80 00:03"  -string
+scope sw-12-024.lan addReservation 90.155.142.196 "00:17:9a:7a:7c:80 00:04"  -string
+scope sw-12-024.lan addReservation 90.155.142.197 "00:17:9a:7a:7c:80 00:05"  -string
+scope sw-12-024.lan addReservation 90.155.142.198 "00:17:9a:7a:7c:80 00:06"  -string
+scope sw-12-024.lan addReservation 90.155.142.199 "00:17:9a:7a:7c:80 00:07"  -string
+scope sw-12-024.lan addReservation 90.155.142.200 "00:17:9a:7a:7c:80 00:08"  -string
+scope sw-12-024.lan addReservation 90.155.142.201 "00:17:9a:7a:7c:80 00:09"  -string
+scope sw-12-024.lan addReservation 90.155.142.202 "00:17:9a:7a:7c:80 00:0a"  -string
+scope sw-12-024.lan addReservation 90.155.142.203 "00:17:9a:7a:7c:80 00:0b"  -string
+scope sw-12-024.lan addReservation 90.155.142.204 "00:17:9a:7a:7c:80 00:0c"  -string
+scope sw-12-024.lan addReservation 90.155.142.205 "00:17:9a:7a:7c:80 00:0d"  -string
+scope sw-12-024.lan addReservation 90.155.142.206 "00:17:9a:7a:7c:80 00:0e"  -string
+scope sw-12-024.lan addReservation 90.155.142.207 "00:17:9a:7a:7c:80 00:0f"  -string
+scope sw-12-024.lan addReservation 90.155.142.208 "00:17:9a:7a:7c:80 00:10"  -string
+scope sw-12-024.lan addReservation 90.155.142.209 "00:17:9a:7a:7c:80 00:11"  -string
+scope sw-12-024.lan addReservation 90.155.142.210 "00:17:9a:7a:7c:80 00:12"  -string
+scope sw-12-024.lan addReservation 90.155.142.211 "00:17:9a:7a:7c:80 00:13"  -string
+scope sw-12-024.lan addReservation 90.155.142.212 "00:17:9a:7a:7c:80 00:14"  -string
+scope sw-12-024.lan addReservation 90.155.142.213 "00:17:9a:7a:7c:80 00:15"  -string
+scope sw-12-024.lan addReservation 90.155.142.214 "00:17:9a:7a:7c:80 00:16"  -string
+scope sw-12-024.lan addReservation 90.155.142.215 "00:17:9a:7a:7c:80 00:17"  -string
+scope sw-12-024.lan addReservation 90.155.142.216 "00:17:9a:7a:7c:80 00:18"  -string
+
+dhcp reload
+
+policy sw-12-025.lan  create
+policy sw-12-025.lan  set offer-timeout 60s
+policy sw-12-025.lan  set grace-period  0
+policy sw-12-025.lan  set use-client-id-for-reservations  on
+policy sw-12-025.lan  setOption routers 90.155.142.254
+policy sw-12-025.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-025.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.142.254 create
+client-class 90.155.142.254 set selection-criteria "sw-12-025.lan"
+client-class 90.155.142.254 set policy-name  sw-12-025.lan
+
+client-class 90.155.142.254 set host-name sw-12-001
+client-class 90.155.142.254 set domain-name vl_525 
+
+client-class 90.155.142.254  set client-lookup-id=@a.txt
+client-class 90.155.142.254  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-025.lan create 90.155.142.224 255.255.255.224
+scope sw-12-025.lan set policy  sw-12-025.lan
+scope sw-12-025.lan set selection-tag-list  "sw-12-025.lan"
+
+
+scope sw-12-025.lan addReservation 90.155.142.225 "00:17:9a:bf:bc:dc 00:01"  -string
+scope sw-12-025.lan addReservation 90.155.142.226 "00:17:9a:bf:bc:dc 00:02"  -string
+scope sw-12-025.lan addReservation 90.155.142.227 "00:17:9a:bf:bc:dc 00:03"  -string
+scope sw-12-025.lan addReservation 90.155.142.228 "00:17:9a:bf:bc:dc 00:04"  -string
+scope sw-12-025.lan addReservation 90.155.142.229 "00:17:9a:bf:bc:dc 00:05"  -string
+scope sw-12-025.lan addReservation 90.155.142.230 "00:17:9a:bf:bc:dc 00:06"  -string
+scope sw-12-025.lan addReservation 90.155.142.231 "00:17:9a:bf:bc:dc 00:07"  -string
+scope sw-12-025.lan addReservation 90.155.142.232 "00:17:9a:bf:bc:dc 00:08"  -string
+scope sw-12-025.lan addReservation 90.155.142.233 "00:17:9a:bf:bc:dc 00:09"  -string
+scope sw-12-025.lan addReservation 90.155.142.234 "00:17:9a:bf:bc:dc 00:0a"  -string
+scope sw-12-025.lan addReservation 90.155.142.235 "00:17:9a:bf:bc:dc 00:0b"  -string
+scope sw-12-025.lan addReservation 90.155.142.236 "00:17:9a:bf:bc:dc 00:0c"  -string
+scope sw-12-025.lan addReservation 90.155.142.237 "00:17:9a:bf:bc:dc 00:0d"  -string
+scope sw-12-025.lan addReservation 90.155.142.238 "00:17:9a:bf:bc:dc 00:0e"  -string
+scope sw-12-025.lan addReservation 90.155.142.239 "00:17:9a:bf:bc:dc 00:0f"  -string
+scope sw-12-025.lan addReservation 90.155.142.240 "00:17:9a:bf:bc:dc 00:10"  -string
+scope sw-12-025.lan addReservation 90.155.142.241 "00:17:9a:bf:bc:dc 00:11"  -string
+scope sw-12-025.lan addReservation 90.155.142.242 "00:17:9a:bf:bc:dc 00:12"  -string
+scope sw-12-025.lan addReservation 90.155.142.243 "00:17:9a:bf:bc:dc 00:13"  -string
+scope sw-12-025.lan addReservation 90.155.142.244 "00:17:9a:bf:bc:dc 00:14"  -string
+scope sw-12-025.lan addReservation 90.155.142.245 "00:17:9a:bf:bc:dc 00:15"  -string
+scope sw-12-025.lan addReservation 90.155.142.246 "00:17:9a:bf:bc:dc 00:16"  -string
+scope sw-12-025.lan addReservation 90.155.142.247 "00:17:9a:bf:bc:dc 00:17"  -string
+scope sw-12-025.lan addReservation 90.155.142.248 "00:17:9a:bf:bc:dc 00:18"  -string
+
+dhcp reload
+
+policy sw-12-026.lan  create
+policy sw-12-026.lan  set offer-timeout 60s
+policy sw-12-026.lan  set grace-period  0
+policy sw-12-026.lan  set use-client-id-for-reservations  on
+policy sw-12-026.lan  setOption routers 90.155.143.30
+policy sw-12-026.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-026.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.143.30 create
+client-class 90.155.143.30 set selection-criteria "sw-12-026.lan"
+client-class 90.155.143.30 set policy-name  sw-12-026.lan
+
+client-class 90.155.143.30 set host-name sw-12-001
+client-class 90.155.143.30 set domain-name vl_526 
+
+client-class 90.155.143.30  set client-lookup-id=@a.txt
+client-class 90.155.143.30  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-026.lan create 90.155.143.0 255.255.255.224
+scope sw-12-026.lan set policy  sw-12-026.lan
+scope sw-12-026.lan set selection-tag-list  "sw-12-026.lan"
+
+
+scope sw-12-026.lan addReservation 90.155.143.1 "00:13:46:e7:e3:10 00:01"  -string
+scope sw-12-026.lan addReservation 90.155.143.2 "00:13:46:e7:e3:10 00:02"  -string
+scope sw-12-026.lan addReservation 90.155.143.3 "00:13:46:e7:e3:10 00:03"  -string
+scope sw-12-026.lan addReservation 90.155.143.4 "00:13:46:e7:e3:10 00:04"  -string
+scope sw-12-026.lan addReservation 90.155.143.5 "00:13:46:e7:e3:10 00:05"  -string
+scope sw-12-026.lan addReservation 90.155.143.6 "00:13:46:e7:e3:10 00:06"  -string
+scope sw-12-026.lan addReservation 90.155.143.7 "00:13:46:e7:e3:10 00:07"  -string
+scope sw-12-026.lan addReservation 90.155.143.8 "00:13:46:e7:e3:10 00:08"  -string
+scope sw-12-026.lan addReservation 90.155.143.9 "00:13:46:e7:e3:10 00:09"  -string
+scope sw-12-026.lan addReservation 90.155.143.10 "00:13:46:e7:e3:10 00:0a"  -string
+scope sw-12-026.lan addReservation 90.155.143.11 "00:13:46:e7:e3:10 00:0b"  -string
+scope sw-12-026.lan addReservation 90.155.143.12 "00:13:46:e7:e3:10 00:0c"  -string
+scope sw-12-026.lan addReservation 90.155.143.13 "00:13:46:e7:e3:10 00:0d"  -string
+scope sw-12-026.lan addReservation 90.155.143.14 "00:13:46:e7:e3:10 00:0e"  -string
+scope sw-12-026.lan addReservation 90.155.143.15 "00:13:46:e7:e3:10 00:0f"  -string
+scope sw-12-026.lan addReservation 90.155.143.16 "00:13:46:e7:e3:10 00:10"  -string
+scope sw-12-026.lan addReservation 90.155.143.17 "00:13:46:e7:e3:10 00:11"  -string
+scope sw-12-026.lan addReservation 90.155.143.18 "00:13:46:e7:e3:10 00:12"  -string
+scope sw-12-026.lan addReservation 90.155.143.19 "00:13:46:e7:e3:10 00:13"  -string
+scope sw-12-026.lan addReservation 90.155.143.20 "00:13:46:e7:e3:10 00:14"  -string
+scope sw-12-026.lan addReservation 90.155.143.21 "00:13:46:e7:e3:10 00:15"  -string
+scope sw-12-026.lan addReservation 90.155.143.22 "00:13:46:e7:e3:10 00:16"  -string
+scope sw-12-026.lan addReservation 90.155.143.23 "00:13:46:e7:e3:10 00:17"  -string
+scope sw-12-026.lan addReservation 90.155.143.24 "00:13:46:e7:e3:10 00:18"  -string
+
+dhcp reload
+
+policy sw-12-027.lan  create
+policy sw-12-027.lan  set offer-timeout 60s
+policy sw-12-027.lan  set grace-period  0
+policy sw-12-027.lan  set use-client-id-for-reservations  on
+policy sw-12-027.lan  setOption routers 90.155.143.62
+policy sw-12-027.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-027.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.143.62 create
+client-class 90.155.143.62 set selection-criteria "sw-12-027.lan"
+client-class 90.155.143.62 set policy-name  sw-12-027.lan
+
+client-class 90.155.143.62 set host-name sw-12-001
+client-class 90.155.143.62 set domain-name vl_527 
+
+client-class 90.155.143.62  set client-lookup-id=@a.txt
+client-class 90.155.143.62  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-027.lan create 90.155.143.32 255.255.255.224
+scope sw-12-027.lan set policy  sw-12-027.lan
+scope sw-12-027.lan set selection-tag-list  "sw-12-027.lan"
+
+
+scope sw-12-027.lan addReservation 90.155.143.33 "00:11:95:ff:35:23 00:01"  -string
+scope sw-12-027.lan addReservation 90.155.143.34 "00:11:95:ff:35:23 00:02"  -string
+scope sw-12-027.lan addReservation 90.155.143.35 "00:11:95:ff:35:23 00:03"  -string
+scope sw-12-027.lan addReservation 90.155.143.36 "00:11:95:ff:35:23 00:04"  -string
+scope sw-12-027.lan addReservation 90.155.143.37 "00:11:95:ff:35:23 00:05"  -string
+scope sw-12-027.lan addReservation 90.155.143.38 "00:11:95:ff:35:23 00:06"  -string
+scope sw-12-027.lan addReservation 90.155.143.39 "00:11:95:ff:35:23 00:07"  -string
+scope sw-12-027.lan addReservation 90.155.143.40 "00:11:95:ff:35:23 00:08"  -string
+scope sw-12-027.lan addReservation 90.155.143.41 "00:11:95:ff:35:23 00:09"  -string
+scope sw-12-027.lan addReservation 90.155.143.42 "00:11:95:ff:35:23 00:0a"  -string
+scope sw-12-027.lan addReservation 90.155.143.43 "00:11:95:ff:35:23 00:0b"  -string
+scope sw-12-027.lan addReservation 90.155.143.44 "00:11:95:ff:35:23 00:0c"  -string
+scope sw-12-027.lan addReservation 90.155.143.45 "00:11:95:ff:35:23 00:0d"  -string
+scope sw-12-027.lan addReservation 90.155.143.46 "00:11:95:ff:35:23 00:0e"  -string
+scope sw-12-027.lan addReservation 90.155.143.47 "00:11:95:ff:35:23 00:0f"  -string
+scope sw-12-027.lan addReservation 90.155.143.48 "00:11:95:ff:35:23 00:10"  -string
+scope sw-12-027.lan addReservation 90.155.143.49 "00:11:95:ff:35:23 00:11"  -string
+scope sw-12-027.lan addReservation 90.155.143.50 "00:11:95:ff:35:23 00:12"  -string
+scope sw-12-027.lan addReservation 90.155.143.51 "00:11:95:ff:35:23 00:13"  -string
+scope sw-12-027.lan addReservation 90.155.143.52 "00:11:95:ff:35:23 00:14"  -string
+scope sw-12-027.lan addReservation 90.155.143.53 "00:11:95:ff:35:23 00:15"  -string
+scope sw-12-027.lan addReservation 90.155.143.54 "00:11:95:ff:35:23 00:16"  -string
+scope sw-12-027.lan addReservation 90.155.143.55 "00:11:95:ff:35:23 00:17"  -string
+scope sw-12-027.lan addReservation 90.155.143.56 "00:11:95:ff:35:23 00:18"  -string
+
+dhcp reload
+
+policy sw-12-028.lan  create
+policy sw-12-028.lan  set offer-timeout 60s
+policy sw-12-028.lan  set grace-period  0
+policy sw-12-028.lan  set use-client-id-for-reservations  on
+policy sw-12-028.lan  setOption routers 90.155.143.94
+policy sw-12-028.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-028.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.143.94 create
+client-class 90.155.143.94 set selection-criteria "sw-12-028.lan"
+client-class 90.155.143.94 set policy-name  sw-12-028.lan
+
+client-class 90.155.143.94 set host-name sw-12-001
+client-class 90.155.143.94 set domain-name vl_528 
+
+client-class 90.155.143.94  set client-lookup-id=@a.txt
+client-class 90.155.143.94  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-028.lan create 90.155.143.64 255.255.255.224
+scope sw-12-028.lan set policy  sw-12-028.lan
+scope sw-12-028.lan set selection-tag-list  "sw-12-028.lan"
+
+
+scope sw-12-028.lan addReservation 90.155.143.65 "00:13:46:7b:c9:11 00:01"  -string
+scope sw-12-028.lan addReservation 90.155.143.66 "00:13:46:7b:c9:11 00:02"  -string
+scope sw-12-028.lan addReservation 90.155.143.67 "00:13:46:7b:c9:11 00:03"  -string
+scope sw-12-028.lan addReservation 90.155.143.68 "00:13:46:7b:c9:11 00:04"  -string
+scope sw-12-028.lan addReservation 90.155.143.69 "00:13:46:7b:c9:11 00:05"  -string
+scope sw-12-028.lan addReservation 90.155.143.70 "00:13:46:7b:c9:11 00:06"  -string
+scope sw-12-028.lan addReservation 90.155.143.71 "00:13:46:7b:c9:11 00:07"  -string
+scope sw-12-028.lan addReservation 90.155.143.72 "00:13:46:7b:c9:11 00:08"  -string
+scope sw-12-028.lan addReservation 90.155.143.73 "00:13:46:7b:c9:11 00:09"  -string
+scope sw-12-028.lan addReservation 90.155.143.74 "00:13:46:7b:c9:11 00:0a"  -string
+scope sw-12-028.lan addReservation 90.155.143.75 "00:13:46:7b:c9:11 00:0b"  -string
+scope sw-12-028.lan addReservation 90.155.143.76 "00:13:46:7b:c9:11 00:0c"  -string
+scope sw-12-028.lan addReservation 90.155.143.77 "00:13:46:7b:c9:11 00:0d"  -string
+scope sw-12-028.lan addReservation 90.155.143.78 "00:13:46:7b:c9:11 00:0e"  -string
+scope sw-12-028.lan addReservation 90.155.143.79 "00:13:46:7b:c9:11 00:0f"  -string
+scope sw-12-028.lan addReservation 90.155.143.80 "00:13:46:7b:c9:11 00:10"  -string
+scope sw-12-028.lan addReservation 90.155.143.81 "00:13:46:7b:c9:11 00:11"  -string
+scope sw-12-028.lan addReservation 90.155.143.82 "00:13:46:7b:c9:11 00:12"  -string
+scope sw-12-028.lan addReservation 90.155.143.83 "00:13:46:7b:c9:11 00:13"  -string
+scope sw-12-028.lan addReservation 90.155.143.84 "00:13:46:7b:c9:11 00:14"  -string
+scope sw-12-028.lan addReservation 90.155.143.85 "00:13:46:7b:c9:11 00:15"  -string
+scope sw-12-028.lan addReservation 90.155.143.86 "00:13:46:7b:c9:11 00:16"  -string
+scope sw-12-028.lan addReservation 90.155.143.87 "00:13:46:7b:c9:11 00:17"  -string
+scope sw-12-028.lan addReservation 90.155.143.88 "00:13:46:7b:c9:11 00:18"  -string
+
+dhcp reload
+
+policy sw-12-029.lan  create
+policy sw-12-029.lan  set offer-timeout 60s
+policy sw-12-029.lan  set grace-period  0
+policy sw-12-029.lan  set use-client-id-for-reservations  on
+policy sw-12-029.lan  setOption routers 90.155.143.126
+policy sw-12-029.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-029.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.143.126 create
+client-class 90.155.143.126 set selection-criteria "sw-12-029.lan"
+client-class 90.155.143.126 set policy-name  sw-12-029.lan
+
+client-class 90.155.143.126 set host-name sw-12-001
+client-class 90.155.143.126 set domain-name vl_529 
+
+client-class 90.155.143.126  set client-lookup-id=@a.txt
+client-class 90.155.143.126  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-029.lan create 90.155.143.96 255.255.255.224
+scope sw-12-029.lan set policy  sw-12-029.lan
+scope sw-12-029.lan set selection-tag-list  "sw-12-029.lan"
+
+
+scope sw-12-029.lan addReservation 90.155.143.97 "00:15:e9:2e:9a:35 00:01"  -string
+scope sw-12-029.lan addReservation 90.155.143.98 "00:15:e9:2e:9a:35 00:02"  -string
+scope sw-12-029.lan addReservation 90.155.143.99 "00:15:e9:2e:9a:35 00:03"  -string
+scope sw-12-029.lan addReservation 90.155.143.100 "00:15:e9:2e:9a:35 00:04"  -string
+scope sw-12-029.lan addReservation 90.155.143.101 "00:15:e9:2e:9a:35 00:05"  -string
+scope sw-12-029.lan addReservation 90.155.143.102 "00:15:e9:2e:9a:35 00:06"  -string
+scope sw-12-029.lan addReservation 90.155.143.103 "00:15:e9:2e:9a:35 00:07"  -string
+scope sw-12-029.lan addReservation 90.155.143.104 "00:15:e9:2e:9a:35 00:08"  -string
+scope sw-12-029.lan addReservation 90.155.143.105 "00:15:e9:2e:9a:35 00:09"  -string
+scope sw-12-029.lan addReservation 90.155.143.106 "00:15:e9:2e:9a:35 00:0a"  -string
+scope sw-12-029.lan addReservation 90.155.143.107 "00:15:e9:2e:9a:35 00:0b"  -string
+scope sw-12-029.lan addReservation 90.155.143.108 "00:15:e9:2e:9a:35 00:0c"  -string
+scope sw-12-029.lan addReservation 90.155.143.109 "00:15:e9:2e:9a:35 00:0d"  -string
+scope sw-12-029.lan addReservation 90.155.143.110 "00:15:e9:2e:9a:35 00:0e"  -string
+scope sw-12-029.lan addReservation 90.155.143.111 "00:15:e9:2e:9a:35 00:0f"  -string
+scope sw-12-029.lan addReservation 90.155.143.112 "00:15:e9:2e:9a:35 00:10"  -string
+scope sw-12-029.lan addReservation 90.155.143.113 "00:15:e9:2e:9a:35 00:11"  -string
+scope sw-12-029.lan addReservation 90.155.143.114 "00:15:e9:2e:9a:35 00:12"  -string
+scope sw-12-029.lan addReservation 90.155.143.115 "00:15:e9:2e:9a:35 00:13"  -string
+scope sw-12-029.lan addReservation 90.155.143.116 "00:15:e9:2e:9a:35 00:14"  -string
+scope sw-12-029.lan addReservation 90.155.143.117 "00:15:e9:2e:9a:35 00:15"  -string
+scope sw-12-029.lan addReservation 90.155.143.118 "00:15:e9:2e:9a:35 00:16"  -string
+scope sw-12-029.lan addReservation 90.155.143.119 "00:15:e9:2e:9a:35 00:17"  -string
+scope sw-12-029.lan addReservation 90.155.143.120 "00:15:e9:2e:9a:35 00:18"  -string
+
+dhcp reload
+
+policy sw-12-030.lan  create
+policy sw-12-030.lan  set offer-timeout 60s
+policy sw-12-030.lan  set grace-period  0
+policy sw-12-030.lan  set use-client-id-for-reservations  on
+policy sw-12-030.lan  setOption routers 90.155.143.158
+policy sw-12-030.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-030.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.143.158 create
+client-class 90.155.143.158 set selection-criteria "sw-12-030.lan"
+client-class 90.155.143.158 set policy-name  sw-12-030.lan
+
+client-class 90.155.143.158 set host-name sw-12-001
+client-class 90.155.143.158 set domain-name vl_530 
+
+client-class 90.155.143.158  set client-lookup-id=@a.txt
+client-class 90.155.143.158  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-030.lan create 90.155.143.128 255.255.255.224
+scope sw-12-030.lan set policy  sw-12-030.lan
+scope sw-12-030.lan set selection-tag-list  "sw-12-030.lan"
+
+
+scope sw-12-030.lan addReservation 90.155.143.129 "00:15:e9:2e:9a:0b 00:01"  -string
+scope sw-12-030.lan addReservation 90.155.143.130 "00:15:e9:2e:9a:0b 00:02"  -string
+scope sw-12-030.lan addReservation 90.155.143.131 "00:15:e9:2e:9a:0b 00:03"  -string
+scope sw-12-030.lan addReservation 90.155.143.132 "00:15:e9:2e:9a:0b 00:04"  -string
+scope sw-12-030.lan addReservation 90.155.143.133 "00:15:e9:2e:9a:0b 00:05"  -string
+scope sw-12-030.lan addReservation 90.155.143.134 "00:15:e9:2e:9a:0b 00:06"  -string
+scope sw-12-030.lan addReservation 90.155.143.135 "00:15:e9:2e:9a:0b 00:07"  -string
+scope sw-12-030.lan addReservation 90.155.143.136 "00:15:e9:2e:9a:0b 00:08"  -string
+scope sw-12-030.lan addReservation 90.155.143.137 "00:15:e9:2e:9a:0b 00:09"  -string
+scope sw-12-030.lan addReservation 90.155.143.138 "00:15:e9:2e:9a:0b 00:0a"  -string
+scope sw-12-030.lan addReservation 90.155.143.139 "00:15:e9:2e:9a:0b 00:0b"  -string
+scope sw-12-030.lan addReservation 90.155.143.140 "00:15:e9:2e:9a:0b 00:0c"  -string
+scope sw-12-030.lan addReservation 90.155.143.141 "00:15:e9:2e:9a:0b 00:0d"  -string
+scope sw-12-030.lan addReservation 90.155.143.142 "00:15:e9:2e:9a:0b 00:0e"  -string
+scope sw-12-030.lan addReservation 90.155.143.143 "00:15:e9:2e:9a:0b 00:0f"  -string
+scope sw-12-030.lan addReservation 90.155.143.144 "00:15:e9:2e:9a:0b 00:10"  -string
+scope sw-12-030.lan addReservation 90.155.143.145 "00:15:e9:2e:9a:0b 00:11"  -string
+scope sw-12-030.lan addReservation 90.155.143.146 "00:15:e9:2e:9a:0b 00:12"  -string
+scope sw-12-030.lan addReservation 90.155.143.147 "00:15:e9:2e:9a:0b 00:13"  -string
+scope sw-12-030.lan addReservation 90.155.143.148 "00:15:e9:2e:9a:0b 00:14"  -string
+scope sw-12-030.lan addReservation 90.155.143.149 "00:15:e9:2e:9a:0b 00:15"  -string
+scope sw-12-030.lan addReservation 90.155.143.150 "00:15:e9:2e:9a:0b 00:16"  -string
+scope sw-12-030.lan addReservation 90.155.143.151 "00:15:e9:2e:9a:0b 00:17"  -string
+scope sw-12-030.lan addReservation 90.155.143.152 "00:15:e9:2e:9a:0b 00:18"  -string
+
+dhcp reload
+
+policy sw-12-031.lan  create
+policy sw-12-031.lan  set offer-timeout 60s
+policy sw-12-031.lan  set grace-period  0
+policy sw-12-031.lan  set use-client-id-for-reservations  on
+policy sw-12-031.lan  setOption routers 90.155.143.190
+policy sw-12-031.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-031.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.143.190 create
+client-class 90.155.143.190 set selection-criteria "sw-12-031.lan"
+client-class 90.155.143.190 set policy-name  sw-12-031.lan
+
+client-class 90.155.143.190 set host-name sw-12-001
+client-class 90.155.143.190 set domain-name vl_531 
+
+client-class 90.155.143.190  set client-lookup-id=@a.txt
+client-class 90.155.143.190  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-031.lan create 90.155.143.160 255.255.255.224
+scope sw-12-031.lan set policy  sw-12-031.lan
+scope sw-12-031.lan set selection-tag-list  "sw-12-031.lan"
+
+
+scope sw-12-031.lan addReservation 90.155.143.161 "00:15:e9:2e:9a:0d 00:01"  -string
+scope sw-12-031.lan addReservation 90.155.143.162 "00:15:e9:2e:9a:0d 00:02"  -string
+scope sw-12-031.lan addReservation 90.155.143.163 "00:15:e9:2e:9a:0d 00:03"  -string
+scope sw-12-031.lan addReservation 90.155.143.164 "00:15:e9:2e:9a:0d 00:04"  -string
+scope sw-12-031.lan addReservation 90.155.143.165 "00:15:e9:2e:9a:0d 00:05"  -string
+scope sw-12-031.lan addReservation 90.155.143.166 "00:15:e9:2e:9a:0d 00:06"  -string
+scope sw-12-031.lan addReservation 90.155.143.167 "00:15:e9:2e:9a:0d 00:07"  -string
+scope sw-12-031.lan addReservation 90.155.143.168 "00:15:e9:2e:9a:0d 00:08"  -string
+scope sw-12-031.lan addReservation 90.155.143.169 "00:15:e9:2e:9a:0d 00:09"  -string
+scope sw-12-031.lan addReservation 90.155.143.170 "00:15:e9:2e:9a:0d 00:0a"  -string
+scope sw-12-031.lan addReservation 90.155.143.171 "00:15:e9:2e:9a:0d 00:0b"  -string
+scope sw-12-031.lan addReservation 90.155.143.172 "00:15:e9:2e:9a:0d 00:0c"  -string
+scope sw-12-031.lan addReservation 90.155.143.173 "00:15:e9:2e:9a:0d 00:0d"  -string
+scope sw-12-031.lan addReservation 90.155.143.174 "00:15:e9:2e:9a:0d 00:0e"  -string
+scope sw-12-031.lan addReservation 90.155.143.175 "00:15:e9:2e:9a:0d 00:0f"  -string
+scope sw-12-031.lan addReservation 90.155.143.176 "00:15:e9:2e:9a:0d 00:10"  -string
+scope sw-12-031.lan addReservation 90.155.143.177 "00:15:e9:2e:9a:0d 00:11"  -string
+scope sw-12-031.lan addReservation 90.155.143.178 "00:15:e9:2e:9a:0d 00:12"  -string
+scope sw-12-031.lan addReservation 90.155.143.179 "00:15:e9:2e:9a:0d 00:13"  -string
+scope sw-12-031.lan addReservation 90.155.143.180 "00:15:e9:2e:9a:0d 00:14"  -string
+scope sw-12-031.lan addReservation 90.155.143.181 "00:15:e9:2e:9a:0d 00:15"  -string
+scope sw-12-031.lan addReservation 90.155.143.182 "00:15:e9:2e:9a:0d 00:16"  -string
+scope sw-12-031.lan addReservation 90.155.143.183 "00:15:e9:2e:9a:0d 00:17"  -string
+scope sw-12-031.lan addReservation 90.155.143.184 "00:15:e9:2e:9a:0d 00:18"  -string
+
+dhcp reload
+
+policy sw-12-032.lan  create
+policy sw-12-032.lan  set offer-timeout 60s
+policy sw-12-032.lan  set grace-period  0
+policy sw-12-032.lan  set use-client-id-for-reservations  on
+policy sw-12-032.lan  setOption routers 90.155.143.222
+policy sw-12-032.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-032.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.143.222 create
+client-class 90.155.143.222 set selection-criteria "sw-12-032.lan"
+client-class 90.155.143.222 set policy-name  sw-12-032.lan
+
+client-class 90.155.143.222 set host-name sw-12-001
+client-class 90.155.143.222 set domain-name vl_532 
+
+client-class 90.155.143.222  set client-lookup-id=@a.txt
+client-class 90.155.143.222  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-032.lan create 90.155.143.192 255.255.255.224
+scope sw-12-032.lan set policy  sw-12-032.lan
+scope sw-12-032.lan set selection-tag-list  "sw-12-032.lan"
+
+
+scope sw-12-032.lan addReservation 90.155.143.193 "00:15:e9:2e:99:ec 00:01"  -string
+scope sw-12-032.lan addReservation 90.155.143.194 "00:15:e9:2e:99:ec 00:02"  -string
+scope sw-12-032.lan addReservation 90.155.143.195 "00:15:e9:2e:99:ec 00:03"  -string
+scope sw-12-032.lan addReservation 90.155.143.196 "00:15:e9:2e:99:ec 00:04"  -string
+scope sw-12-032.lan addReservation 90.155.143.197 "00:15:e9:2e:99:ec 00:05"  -string
+scope sw-12-032.lan addReservation 90.155.143.198 "00:15:e9:2e:99:ec 00:06"  -string
+scope sw-12-032.lan addReservation 90.155.143.199 "00:15:e9:2e:99:ec 00:07"  -string
+scope sw-12-032.lan addReservation 90.155.143.200 "00:15:e9:2e:99:ec 00:08"  -string
+scope sw-12-032.lan addReservation 90.155.143.201 "00:15:e9:2e:99:ec 00:09"  -string
+scope sw-12-032.lan addReservation 90.155.143.202 "00:15:e9:2e:99:ec 00:0a"  -string
+scope sw-12-032.lan addReservation 90.155.143.203 "00:15:e9:2e:99:ec 00:0b"  -string
+scope sw-12-032.lan addReservation 90.155.143.204 "00:15:e9:2e:99:ec 00:0c"  -string
+scope sw-12-032.lan addReservation 90.155.143.205 "00:15:e9:2e:99:ec 00:0d"  -string
+scope sw-12-032.lan addReservation 90.155.143.206 "00:15:e9:2e:99:ec 00:0e"  -string
+scope sw-12-032.lan addReservation 90.155.143.207 "00:15:e9:2e:99:ec 00:0f"  -string
+scope sw-12-032.lan addReservation 90.155.143.208 "00:15:e9:2e:99:ec 00:10"  -string
+scope sw-12-032.lan addReservation 90.155.143.209 "00:15:e9:2e:99:ec 00:11"  -string
+scope sw-12-032.lan addReservation 90.155.143.210 "00:15:e9:2e:99:ec 00:12"  -string
+scope sw-12-032.lan addReservation 90.155.143.211 "00:15:e9:2e:99:ec 00:13"  -string
+scope sw-12-032.lan addReservation 90.155.143.212 "00:15:e9:2e:99:ec 00:14"  -string
+scope sw-12-032.lan addReservation 90.155.143.213 "00:15:e9:2e:99:ec 00:15"  -string
+scope sw-12-032.lan addReservation 90.155.143.214 "00:15:e9:2e:99:ec 00:16"  -string
+scope sw-12-032.lan addReservation 90.155.143.215 "00:15:e9:2e:99:ec 00:17"  -string
+scope sw-12-032.lan addReservation 90.155.143.216 "00:15:e9:2e:99:ec 00:18"  -string
+
+dhcp reload
+
+policy sw-12-033.lan  create
+policy sw-12-033.lan  set offer-timeout 60s
+policy sw-12-033.lan  set grace-period  0
+policy sw-12-033.lan  set use-client-id-for-reservations  on
+policy sw-12-033.lan  setOption routers 90.155.143.254
+policy sw-12-033.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-033.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.143.254 create
+client-class 90.155.143.254 set selection-criteria "sw-12-033.lan"
+client-class 90.155.143.254 set policy-name  sw-12-033.lan
+
+client-class 90.155.143.254 set host-name sw-12-001
+client-class 90.155.143.254 set domain-name vl_533 
+
+client-class 90.155.143.254  set client-lookup-id=@a.txt
+client-class 90.155.143.254  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-033.lan create 90.155.143.224 255.255.255.224
+scope sw-12-033.lan set policy  sw-12-033.lan
+scope sw-12-033.lan set selection-tag-list  "sw-12-033.lan"
+
+
+scope sw-12-033.lan addReservation 90.155.143.225 "00:1c:f0:1a:bb:1e 00:01"  -string
+scope sw-12-033.lan addReservation 90.155.143.226 "00:1c:f0:1a:bb:1e 00:02"  -string
+scope sw-12-033.lan addReservation 90.155.143.227 "00:1c:f0:1a:bb:1e 00:03"  -string
+scope sw-12-033.lan addReservation 90.155.143.228 "00:1c:f0:1a:bb:1e 00:04"  -string
+scope sw-12-033.lan addReservation 90.155.143.229 "00:1c:f0:1a:bb:1e 00:05"  -string
+scope sw-12-033.lan addReservation 90.155.143.230 "00:1c:f0:1a:bb:1e 00:06"  -string
+scope sw-12-033.lan addReservation 90.155.143.231 "00:1c:f0:1a:bb:1e 00:07"  -string
+scope sw-12-033.lan addReservation 90.155.143.232 "00:1c:f0:1a:bb:1e 00:08"  -string
+scope sw-12-033.lan addReservation 90.155.143.233 "00:1c:f0:1a:bb:1e 00:09"  -string
+scope sw-12-033.lan addReservation 90.155.143.234 "00:1c:f0:1a:bb:1e 00:0a"  -string
+scope sw-12-033.lan addReservation 90.155.143.235 "00:1c:f0:1a:bb:1e 00:0b"  -string
+scope sw-12-033.lan addReservation 90.155.143.236 "00:1c:f0:1a:bb:1e 00:0c"  -string
+scope sw-12-033.lan addReservation 90.155.143.237 "00:1c:f0:1a:bb:1e 00:0d"  -string
+scope sw-12-033.lan addReservation 90.155.143.238 "00:1c:f0:1a:bb:1e 00:0e"  -string
+scope sw-12-033.lan addReservation 90.155.143.239 "00:1c:f0:1a:bb:1e 00:0f"  -string
+scope sw-12-033.lan addReservation 90.155.143.240 "00:1c:f0:1a:bb:1e 00:10"  -string
+scope sw-12-033.lan addReservation 90.155.143.241 "00:1c:f0:1a:bb:1e 00:11"  -string
+scope sw-12-033.lan addReservation 90.155.143.242 "00:1c:f0:1a:bb:1e 00:12"  -string
+scope sw-12-033.lan addReservation 90.155.143.243 "00:1c:f0:1a:bb:1e 00:13"  -string
+scope sw-12-033.lan addReservation 90.155.143.244 "00:1c:f0:1a:bb:1e 00:14"  -string
+scope sw-12-033.lan addReservation 90.155.143.245 "00:1c:f0:1a:bb:1e 00:15"  -string
+scope sw-12-033.lan addReservation 90.155.143.246 "00:1c:f0:1a:bb:1e 00:16"  -string
+scope sw-12-033.lan addReservation 90.155.143.247 "00:1c:f0:1a:bb:1e 00:17"  -string
+scope sw-12-033.lan addReservation 90.155.143.248 "00:1c:f0:1a:bb:1e 00:18"  -string
+
+dhcp reload
+
+policy sw-12-034.lan  create
+policy sw-12-034.lan  set offer-timeout 60s
+policy sw-12-034.lan  set grace-period  0
+policy sw-12-034.lan  set use-client-id-for-reservations  on
+policy sw-12-034.lan  setOption routers 90.155.144.30
+policy sw-12-034.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-034.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.144.30 create
+client-class 90.155.144.30 set selection-criteria "sw-12-034.lan"
+client-class 90.155.144.30 set policy-name  sw-12-034.lan
+
+client-class 90.155.144.30 set host-name sw-12-001
+client-class 90.155.144.30 set domain-name vl_534 
+
+client-class 90.155.144.30  set client-lookup-id=@a.txt
+client-class 90.155.144.30  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-034.lan create 90.155.144.0 255.255.255.224
+scope sw-12-034.lan set policy  sw-12-034.lan
+scope sw-12-034.lan set selection-tag-list  "sw-12-034.lan"
+
+
+scope sw-12-034.lan addReservation 90.155.144.1 "00:15:e9:2e:99:df 00:01"  -string
+scope sw-12-034.lan addReservation 90.155.144.2 "00:15:e9:2e:99:df 00:02"  -string
+scope sw-12-034.lan addReservation 90.155.144.3 "00:15:e9:2e:99:df 00:03"  -string
+scope sw-12-034.lan addReservation 90.155.144.4 "00:15:e9:2e:99:df 00:04"  -string
+scope sw-12-034.lan addReservation 90.155.144.5 "00:15:e9:2e:99:df 00:05"  -string
+scope sw-12-034.lan addReservation 90.155.144.6 "00:15:e9:2e:99:df 00:06"  -string
+scope sw-12-034.lan addReservation 90.155.144.7 "00:15:e9:2e:99:df 00:07"  -string
+scope sw-12-034.lan addReservation 90.155.144.8 "00:15:e9:2e:99:df 00:08"  -string
+scope sw-12-034.lan addReservation 90.155.144.9 "00:15:e9:2e:99:df 00:09"  -string
+scope sw-12-034.lan addReservation 90.155.144.10 "00:15:e9:2e:99:df 00:0a"  -string
+scope sw-12-034.lan addReservation 90.155.144.11 "00:15:e9:2e:99:df 00:0b"  -string
+scope sw-12-034.lan addReservation 90.155.144.12 "00:15:e9:2e:99:df 00:0c"  -string
+scope sw-12-034.lan addReservation 90.155.144.13 "00:15:e9:2e:99:df 00:0d"  -string
+scope sw-12-034.lan addReservation 90.155.144.14 "00:15:e9:2e:99:df 00:0e"  -string
+scope sw-12-034.lan addReservation 90.155.144.15 "00:15:e9:2e:99:df 00:0f"  -string
+scope sw-12-034.lan addReservation 90.155.144.16 "00:15:e9:2e:99:df 00:10"  -string
+scope sw-12-034.lan addReservation 90.155.144.17 "00:15:e9:2e:99:df 00:11"  -string
+scope sw-12-034.lan addReservation 90.155.144.18 "00:15:e9:2e:99:df 00:12"  -string
+scope sw-12-034.lan addReservation 90.155.144.19 "00:15:e9:2e:99:df 00:13"  -string
+scope sw-12-034.lan addReservation 90.155.144.20 "00:15:e9:2e:99:df 00:14"  -string
+scope sw-12-034.lan addReservation 90.155.144.21 "00:15:e9:2e:99:df 00:15"  -string
+scope sw-12-034.lan addReservation 90.155.144.22 "00:15:e9:2e:99:df 00:16"  -string
+scope sw-12-034.lan addReservation 90.155.144.23 "00:15:e9:2e:99:df 00:17"  -string
+scope sw-12-034.lan addReservation 90.155.144.24 "00:15:e9:2e:99:df 00:18"  -string
+
+dhcp reload
+
+policy sw-12-035.lan  create
+policy sw-12-035.lan  set offer-timeout 60s
+policy sw-12-035.lan  set grace-period  0
+policy sw-12-035.lan  set use-client-id-for-reservations  on
+policy sw-12-035.lan  setOption routers 90.155.144.62
+policy sw-12-035.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-035.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.144.62 create
+client-class 90.155.144.62 set selection-criteria "sw-12-035.lan"
+client-class 90.155.144.62 set policy-name  sw-12-035.lan
+
+client-class 90.155.144.62 set host-name sw-12-001
+client-class 90.155.144.62 set domain-name vl_535 
+
+client-class 90.155.144.62  set client-lookup-id=@a.txt
+client-class 90.155.144.62  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-035.lan create 90.155.144.32 255.255.255.224
+scope sw-12-035.lan set policy  sw-12-035.lan
+scope sw-12-035.lan set selection-tag-list  "sw-12-035.lan"
+
+
+scope sw-12-035.lan addReservation 90.155.144.33 "00:15:e9:2e:99:be 00:01"  -string
+scope sw-12-035.lan addReservation 90.155.144.34 "00:15:e9:2e:99:be 00:02"  -string
+scope sw-12-035.lan addReservation 90.155.144.35 "00:15:e9:2e:99:be 00:03"  -string
+scope sw-12-035.lan addReservation 90.155.144.36 "00:15:e9:2e:99:be 00:04"  -string
+scope sw-12-035.lan addReservation 90.155.144.37 "00:15:e9:2e:99:be 00:05"  -string
+scope sw-12-035.lan addReservation 90.155.144.38 "00:15:e9:2e:99:be 00:06"  -string
+scope sw-12-035.lan addReservation 90.155.144.39 "00:15:e9:2e:99:be 00:07"  -string
+scope sw-12-035.lan addReservation 90.155.144.40 "00:15:e9:2e:99:be 00:08"  -string
+scope sw-12-035.lan addReservation 90.155.144.41 "00:15:e9:2e:99:be 00:09"  -string
+scope sw-12-035.lan addReservation 90.155.144.42 "00:15:e9:2e:99:be 00:0a"  -string
+scope sw-12-035.lan addReservation 90.155.144.43 "00:15:e9:2e:99:be 00:0b"  -string
+scope sw-12-035.lan addReservation 90.155.144.44 "00:15:e9:2e:99:be 00:0c"  -string
+scope sw-12-035.lan addReservation 90.155.144.45 "00:15:e9:2e:99:be 00:0d"  -string
+scope sw-12-035.lan addReservation 90.155.144.46 "00:15:e9:2e:99:be 00:0e"  -string
+scope sw-12-035.lan addReservation 90.155.144.47 "00:15:e9:2e:99:be 00:0f"  -string
+scope sw-12-035.lan addReservation 90.155.144.48 "00:15:e9:2e:99:be 00:10"  -string
+scope sw-12-035.lan addReservation 90.155.144.49 "00:15:e9:2e:99:be 00:11"  -string
+scope sw-12-035.lan addReservation 90.155.144.50 "00:15:e9:2e:99:be 00:12"  -string
+scope sw-12-035.lan addReservation 90.155.144.51 "00:15:e9:2e:99:be 00:13"  -string
+scope sw-12-035.lan addReservation 90.155.144.52 "00:15:e9:2e:99:be 00:14"  -string
+scope sw-12-035.lan addReservation 90.155.144.53 "00:15:e9:2e:99:be 00:15"  -string
+scope sw-12-035.lan addReservation 90.155.144.54 "00:15:e9:2e:99:be 00:16"  -string
+scope sw-12-035.lan addReservation 90.155.144.55 "00:15:e9:2e:99:be 00:17"  -string
+scope sw-12-035.lan addReservation 90.155.144.56 "00:15:e9:2e:99:be 00:18"  -string
+
+dhcp reload
+
+policy sw-12-036.lan  create
+policy sw-12-036.lan  set offer-timeout 60s
+policy sw-12-036.lan  set grace-period  0
+policy sw-12-036.lan  set use-client-id-for-reservations  on
+policy sw-12-036.lan  setOption routers 90.155.144.94
+policy sw-12-036.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-036.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.144.94 create
+client-class 90.155.144.94 set selection-criteria "sw-12-036.lan"
+client-class 90.155.144.94 set policy-name  sw-12-036.lan
+
+client-class 90.155.144.94 set host-name sw-12-001
+client-class 90.155.144.94 set domain-name vl_536 
+
+client-class 90.155.144.94  set client-lookup-id=@a.txt
+client-class 90.155.144.94  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-036.lan create 90.155.144.64 255.255.255.224
+scope sw-12-036.lan set policy  sw-12-036.lan
+scope sw-12-036.lan set selection-tag-list  "sw-12-036.lan"
+
+
+scope sw-12-036.lan addReservation 90.155.144.65 "00:15:e9:ac:d6:b7 00:01"  -string
+scope sw-12-036.lan addReservation 90.155.144.66 "00:15:e9:ac:d6:b7 00:02"  -string
+scope sw-12-036.lan addReservation 90.155.144.67 "00:15:e9:ac:d6:b7 00:03"  -string
+scope sw-12-036.lan addReservation 90.155.144.68 "00:15:e9:ac:d6:b7 00:04"  -string
+scope sw-12-036.lan addReservation 90.155.144.69 "00:15:e9:ac:d6:b7 00:05"  -string
+scope sw-12-036.lan addReservation 90.155.144.70 "00:15:e9:ac:d6:b7 00:06"  -string
+scope sw-12-036.lan addReservation 90.155.144.71 "00:15:e9:ac:d6:b7 00:07"  -string
+scope sw-12-036.lan addReservation 90.155.144.72 "00:15:e9:ac:d6:b7 00:08"  -string
+scope sw-12-036.lan addReservation 90.155.144.73 "00:15:e9:ac:d6:b7 00:09"  -string
+scope sw-12-036.lan addReservation 90.155.144.74 "00:15:e9:ac:d6:b7 00:0a"  -string
+scope sw-12-036.lan addReservation 90.155.144.75 "00:15:e9:ac:d6:b7 00:0b"  -string
+scope sw-12-036.lan addReservation 90.155.144.76 "00:15:e9:ac:d6:b7 00:0c"  -string
+scope sw-12-036.lan addReservation 90.155.144.77 "00:15:e9:ac:d6:b7 00:0d"  -string
+scope sw-12-036.lan addReservation 90.155.144.78 "00:15:e9:ac:d6:b7 00:0e"  -string
+scope sw-12-036.lan addReservation 90.155.144.79 "00:15:e9:ac:d6:b7 00:0f"  -string
+scope sw-12-036.lan addReservation 90.155.144.80 "00:15:e9:ac:d6:b7 00:10"  -string
+scope sw-12-036.lan addReservation 90.155.144.81 "00:15:e9:ac:d6:b7 00:11"  -string
+scope sw-12-036.lan addReservation 90.155.144.82 "00:15:e9:ac:d6:b7 00:12"  -string
+scope sw-12-036.lan addReservation 90.155.144.83 "00:15:e9:ac:d6:b7 00:13"  -string
+scope sw-12-036.lan addReservation 90.155.144.84 "00:15:e9:ac:d6:b7 00:14"  -string
+scope sw-12-036.lan addReservation 90.155.144.85 "00:15:e9:ac:d6:b7 00:15"  -string
+scope sw-12-036.lan addReservation 90.155.144.86 "00:15:e9:ac:d6:b7 00:16"  -string
+scope sw-12-036.lan addReservation 90.155.144.87 "00:15:e9:ac:d6:b7 00:17"  -string
+scope sw-12-036.lan addReservation 90.155.144.88 "00:15:e9:ac:d6:b7 00:18"  -string
+
+dhcp reload
+
+policy sw-12-037.lan  create
+policy sw-12-037.lan  set offer-timeout 60s
+policy sw-12-037.lan  set grace-period  0
+policy sw-12-037.lan  set use-client-id-for-reservations  on
+policy sw-12-037.lan  setOption routers 90.155.144.126
+policy sw-12-037.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-037.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.144.126 create
+client-class 90.155.144.126 set selection-criteria "sw-12-037.lan"
+client-class 90.155.144.126 set policy-name  sw-12-037.lan
+
+client-class 90.155.144.126 set host-name sw-12-001
+client-class 90.155.144.126 set domain-name vl_537 
+
+client-class 90.155.144.126  set client-lookup-id=@a.txt
+client-class 90.155.144.126  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-037.lan create 90.155.144.96 255.255.255.224
+scope sw-12-037.lan set policy  sw-12-037.lan
+scope sw-12-037.lan set selection-tag-list  "sw-12-037.lan"
+
+
+scope sw-12-037.lan addReservation 90.155.144.97 "00:15:e9:ac:d6:ad 00:01"  -string
+scope sw-12-037.lan addReservation 90.155.144.98 "00:15:e9:ac:d6:ad 00:02"  -string
+scope sw-12-037.lan addReservation 90.155.144.99 "00:15:e9:ac:d6:ad 00:03"  -string
+scope sw-12-037.lan addReservation 90.155.144.100 "00:15:e9:ac:d6:ad 00:04"  -string
+scope sw-12-037.lan addReservation 90.155.144.101 "00:15:e9:ac:d6:ad 00:05"  -string
+scope sw-12-037.lan addReservation 90.155.144.102 "00:15:e9:ac:d6:ad 00:06"  -string
+scope sw-12-037.lan addReservation 90.155.144.103 "00:15:e9:ac:d6:ad 00:07"  -string
+scope sw-12-037.lan addReservation 90.155.144.104 "00:15:e9:ac:d6:ad 00:08"  -string
+scope sw-12-037.lan addReservation 90.155.144.105 "00:15:e9:ac:d6:ad 00:09"  -string
+scope sw-12-037.lan addReservation 90.155.144.106 "00:15:e9:ac:d6:ad 00:0a"  -string
+scope sw-12-037.lan addReservation 90.155.144.107 "00:15:e9:ac:d6:ad 00:0b"  -string
+scope sw-12-037.lan addReservation 90.155.144.108 "00:15:e9:ac:d6:ad 00:0c"  -string
+scope sw-12-037.lan addReservation 90.155.144.109 "00:15:e9:ac:d6:ad 00:0d"  -string
+scope sw-12-037.lan addReservation 90.155.144.110 "00:15:e9:ac:d6:ad 00:0e"  -string
+scope sw-12-037.lan addReservation 90.155.144.111 "00:15:e9:ac:d6:ad 00:0f"  -string
+scope sw-12-037.lan addReservation 90.155.144.112 "00:15:e9:ac:d6:ad 00:10"  -string
+scope sw-12-037.lan addReservation 90.155.144.113 "00:15:e9:ac:d6:ad 00:11"  -string
+scope sw-12-037.lan addReservation 90.155.144.114 "00:15:e9:ac:d6:ad 00:12"  -string
+scope sw-12-037.lan addReservation 90.155.144.115 "00:15:e9:ac:d6:ad 00:13"  -string
+scope sw-12-037.lan addReservation 90.155.144.116 "00:15:e9:ac:d6:ad 00:14"  -string
+scope sw-12-037.lan addReservation 90.155.144.117 "00:15:e9:ac:d6:ad 00:15"  -string
+scope sw-12-037.lan addReservation 90.155.144.118 "00:15:e9:ac:d6:ad 00:16"  -string
+scope sw-12-037.lan addReservation 90.155.144.119 "00:15:e9:ac:d6:ad 00:17"  -string
+scope sw-12-037.lan addReservation 90.155.144.120 "00:15:e9:ac:d6:ad 00:18"  -string
+
+dhcp reload
+
+policy sw-12-038.lan  create
+policy sw-12-038.lan  set offer-timeout 60s
+policy sw-12-038.lan  set grace-period  0
+policy sw-12-038.lan  set use-client-id-for-reservations  on
+policy sw-12-038.lan  setOption routers 90.155.144.158
+policy sw-12-038.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-038.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.144.158 create
+client-class 90.155.144.158 set selection-criteria "sw-12-038.lan"
+client-class 90.155.144.158 set policy-name  sw-12-038.lan
+
+client-class 90.155.144.158 set host-name sw-12-001
+client-class 90.155.144.158 set domain-name vl_538 
+
+client-class 90.155.144.158  set client-lookup-id=@a.txt
+client-class 90.155.144.158  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-038.lan create 90.155.144.128 255.255.255.224
+scope sw-12-038.lan set policy  sw-12-038.lan
+scope sw-12-038.lan set selection-tag-list  "sw-12-038.lan"
+
+
+scope sw-12-038.lan addReservation 90.155.144.129 "00:1b:11:b8:bc:f2 00:01"  -string
+scope sw-12-038.lan addReservation 90.155.144.130 "00:1b:11:b8:bc:f2 00:02"  -string
+scope sw-12-038.lan addReservation 90.155.144.131 "00:1b:11:b8:bc:f2 00:03"  -string
+scope sw-12-038.lan addReservation 90.155.144.132 "00:1b:11:b8:bc:f2 00:04"  -string
+scope sw-12-038.lan addReservation 90.155.144.133 "00:1b:11:b8:bc:f2 00:05"  -string
+scope sw-12-038.lan addReservation 90.155.144.134 "00:1b:11:b8:bc:f2 00:06"  -string
+scope sw-12-038.lan addReservation 90.155.144.135 "00:1b:11:b8:bc:f2 00:07"  -string
+scope sw-12-038.lan addReservation 90.155.144.136 "00:1b:11:b8:bc:f2 00:08"  -string
+scope sw-12-038.lan addReservation 90.155.144.137 "00:1b:11:b8:bc:f2 00:09"  -string
+scope sw-12-038.lan addReservation 90.155.144.138 "00:1b:11:b8:bc:f2 00:0a"  -string
+scope sw-12-038.lan addReservation 90.155.144.139 "00:1b:11:b8:bc:f2 00:0b"  -string
+scope sw-12-038.lan addReservation 90.155.144.140 "00:1b:11:b8:bc:f2 00:0c"  -string
+scope sw-12-038.lan addReservation 90.155.144.141 "00:1b:11:b8:bc:f2 00:0d"  -string
+scope sw-12-038.lan addReservation 90.155.144.142 "00:1b:11:b8:bc:f2 00:0e"  -string
+scope sw-12-038.lan addReservation 90.155.144.143 "00:1b:11:b8:bc:f2 00:0f"  -string
+scope sw-12-038.lan addReservation 90.155.144.144 "00:1b:11:b8:bc:f2 00:10"  -string
+scope sw-12-038.lan addReservation 90.155.144.145 "00:1b:11:b8:bc:f2 00:11"  -string
+scope sw-12-038.lan addReservation 90.155.144.146 "00:1b:11:b8:bc:f2 00:12"  -string
+scope sw-12-038.lan addReservation 90.155.144.147 "00:1b:11:b8:bc:f2 00:13"  -string
+scope sw-12-038.lan addReservation 90.155.144.148 "00:1b:11:b8:bc:f2 00:14"  -string
+scope sw-12-038.lan addReservation 90.155.144.149 "00:1b:11:b8:bc:f2 00:15"  -string
+scope sw-12-038.lan addReservation 90.155.144.150 "00:1b:11:b8:bc:f2 00:16"  -string
+scope sw-12-038.lan addReservation 90.155.144.151 "00:1b:11:b8:bc:f2 00:17"  -string
+scope sw-12-038.lan addReservation 90.155.144.152 "00:1b:11:b8:bc:f2 00:18"  -string
+
+dhcp reload
+
+policy sw-12-039.lan  create
+policy sw-12-039.lan  set offer-timeout 60s
+policy sw-12-039.lan  set grace-period  0
+policy sw-12-039.lan  set use-client-id-for-reservations  on
+policy sw-12-039.lan  setOption routers 90.155.144.190
+policy sw-12-039.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-039.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.144.190 create
+client-class 90.155.144.190 set selection-criteria "sw-12-039.lan"
+client-class 90.155.144.190 set policy-name  sw-12-039.lan
+
+client-class 90.155.144.190 set host-name sw-12-001
+client-class 90.155.144.190 set domain-name vl_539 
+
+client-class 90.155.144.190  set client-lookup-id=@a.txt
+client-class 90.155.144.190  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-039.lan create 90.155.144.160 255.255.255.224
+scope sw-12-039.lan set policy  sw-12-039.lan
+scope sw-12-039.lan set selection-tag-list  "sw-12-039.lan"
+
+
+scope sw-12-039.lan addReservation 90.155.144.161 "00:17:9a:7a:13:33 00:01"  -string
+scope sw-12-039.lan addReservation 90.155.144.162 "00:17:9a:7a:13:33 00:02"  -string
+scope sw-12-039.lan addReservation 90.155.144.163 "00:17:9a:7a:13:33 00:03"  -string
+scope sw-12-039.lan addReservation 90.155.144.164 "00:17:9a:7a:13:33 00:04"  -string
+scope sw-12-039.lan addReservation 90.155.144.165 "00:17:9a:7a:13:33 00:05"  -string
+scope sw-12-039.lan addReservation 90.155.144.166 "00:17:9a:7a:13:33 00:06"  -string
+scope sw-12-039.lan addReservation 90.155.144.167 "00:17:9a:7a:13:33 00:07"  -string
+scope sw-12-039.lan addReservation 90.155.144.168 "00:17:9a:7a:13:33 00:08"  -string
+scope sw-12-039.lan addReservation 90.155.144.169 "00:17:9a:7a:13:33 00:09"  -string
+scope sw-12-039.lan addReservation 90.155.144.170 "00:17:9a:7a:13:33 00:0a"  -string
+scope sw-12-039.lan addReservation 90.155.144.171 "00:17:9a:7a:13:33 00:0b"  -string
+scope sw-12-039.lan addReservation 90.155.144.172 "00:17:9a:7a:13:33 00:0c"  -string
+scope sw-12-039.lan addReservation 90.155.144.173 "00:17:9a:7a:13:33 00:0d"  -string
+scope sw-12-039.lan addReservation 90.155.144.174 "00:17:9a:7a:13:33 00:0e"  -string
+scope sw-12-039.lan addReservation 90.155.144.175 "00:17:9a:7a:13:33 00:0f"  -string
+scope sw-12-039.lan addReservation 90.155.144.176 "00:17:9a:7a:13:33 00:10"  -string
+scope sw-12-039.lan addReservation 90.155.144.177 "00:17:9a:7a:13:33 00:11"  -string
+scope sw-12-039.lan addReservation 90.155.144.178 "00:17:9a:7a:13:33 00:12"  -string
+scope sw-12-039.lan addReservation 90.155.144.179 "00:17:9a:7a:13:33 00:13"  -string
+scope sw-12-039.lan addReservation 90.155.144.180 "00:17:9a:7a:13:33 00:14"  -string
+scope sw-12-039.lan addReservation 90.155.144.181 "00:17:9a:7a:13:33 00:15"  -string
+scope sw-12-039.lan addReservation 90.155.144.182 "00:17:9a:7a:13:33 00:16"  -string
+scope sw-12-039.lan addReservation 90.155.144.183 "00:17:9a:7a:13:33 00:17"  -string
+scope sw-12-039.lan addReservation 90.155.144.184 "00:17:9a:7a:13:33 00:18"  -string
+
+dhcp reload
+
+policy sw-12-040.lan  create
+policy sw-12-040.lan  set offer-timeout 60s
+policy sw-12-040.lan  set grace-period  0
+policy sw-12-040.lan  set use-client-id-for-reservations  on
+policy sw-12-040.lan  setOption routers 90.155.144.222
+policy sw-12-040.lan  setOption subnet-mask  255.255.255.224
+policy sw-12-040.lan  setOption  domain-name-servers  90.155.128.65,90.155.130.125
+
+
+
+client-class 90.155.144.222 create
+client-class 90.155.144.222 set selection-criteria "sw-12-040.lan"
+client-class 90.155.144.222 set policy-name  sw-12-040.lan
+
+client-class 90.155.144.222 set host-name sw-12-001
+client-class 90.155.144.222 set domain-name vl_540 
+
+client-class 90.155.144.222  set client-lookup-id=@a.txt
+client-class 90.155.144.222  set override-client-id=@a.txt
+
+
+
+
+scope sw-12-040.lan create 90.155.144.192 255.255.255.224
+scope sw-12-040.lan set policy  sw-12-040.lan
+scope sw-12-040.lan set selection-tag-list  "sw-12-040.lan"
+
+
+scope sw-12-040.lan addReservation 90.155.144.193 "00:1b:11:b8:d6:0a 00:01"  -string
+scope sw-12-040.lan addReservation 90.155.144.194 "00:1b:11:b8:d6:0a 00:02"  -string
+scope sw-12-040.lan addReservation 90.155.144.195 "00:1b:11:b8:d6:0a 00:03"  -string
+scope sw-12-040.lan addReservation 90.155.144.196 "00:1b:11:b8:d6:0a 00:04"  -string
+scope sw-12-040.lan addReservation 90.155.144.197 "00:1b:11:b8:d6:0a 00:05"  -string
+scope sw-12-040.lan addReservation 90.155.144.198 "00:1b:11:b8:d6:0a 00:06"  -string
+scope sw-12-040.lan addReservation 90.155.144.199 "00:1b:11:b8:d6:0a 00:07"  -string
+scope sw-12-040.lan addReservation 90.155.144.200 "00:1b:11:b8:d6:0a 00:08"  -string
+scope sw-12-040.lan addReservation 90.155.144.201 "00:1b:11:b8:d6:0a 00:09"  -string
+scope sw-12-040.lan addReservation 90.155.144.202 "00:1b:11:b8:d6:0a 00:0a"  -string
+scope sw-12-040.lan addReservation 90.155.144.203 "00:1b:11:b8:d6:0a 00:0b"  -string
+scope sw-12-040.lan addReservation 90.155.144.204 "00:1b:11:b8:d6:0a 00:0c"  -string
+scope sw-12-040.lan addReservation 90.155.144.205 "00:1b:11:b8:d6:0a 00:0d"  -string
+scope sw-12-040.lan addReservation 90.155.144.206 "00:1b:11:b8:d6:0a 00:0e"  -string
+scope sw-12-040.lan addReservation 90.155.144.207 "00:1b:11:b8:d6:0a 00:0f"  -string
+scope sw-12-040.lan addReservation 90.155.144.208 "00:1b:11:b8:d6:0a 00:10"  -string
+scope sw-12-040.lan addReservation 90.155.144.209 "00:1b:11:b8:d6:0a 00:11"  -string
+scope sw-12-040.lan addReservation 90.155.144.210 "00:1b:11:b8:d6:0a 00:12"  -string
+scope sw-12-040.lan addReservation 90.155.144.211 "00:1b:11:b8:d6:0a 00:13"  -string
+scope sw-12-040.lan addReservation 90.155.144.212 "00:1b:11:b8:d6:0a 00:14"  -string
+scope sw-12-040.lan addReservation 90.155.144.213 "00:1b:11:b8:d6:0a 00:15"  -string
+scope sw-12-040.lan addReservation 90.155.144.214 "00:1b:11:b8:d6:0a 00:16"  -string
+scope sw-12-040.lan addReservation 90.155.144.215 "00:1b:11:b8:d6:0a 00:17"  -string
+scope sw-12-040.lan addReservation 90.155.144.216 "00:1b:11:b8:d6:0a 00:18"  -string
+
+dhcp reload
+
