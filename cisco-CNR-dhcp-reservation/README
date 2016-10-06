@@ -13,8 +13,8 @@ netaddr		mask			MAC  			HOSTNAME 	DOMAIN  Switch-aggrr
 
 
 cnr24.pl and cnr48.pl for switch type 1 or 2 
-ip-macXX.txt -  входные данные
-resXX.txt - res
+ip-macXX.txt - input file 
+resXX.txt - result
 tXX.txt - template
 
 where XX - 24 or 48 depending on switch type 
