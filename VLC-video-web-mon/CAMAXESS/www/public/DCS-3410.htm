@@ -1,0 +1,10 @@
+
+   <script type="text/javascript" src="swfobject.js"></script>
+   <div id="mplayer">this will be replaced by the SWF.</div>
+   <script type="text/javascript">
+       var so = new SWFObject('player.swf','player','459','375','9');
+       so.addParam('allowfullscreen','true');
+       so.addParam('flashvars','start=1&amp;repeat=always&amp;file=http://10.83.102.66:8085/stream.flv&amp;bufferlength=0&amp;autostart=true&amp;displayclick=none&amp;mute=false');
+       so.write('mplayer');
+   </script>
+
