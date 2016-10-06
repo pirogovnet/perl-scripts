@@ -1,0 +1,13 @@
+show clips log circuit <cct-handle>
+show dhcpv6 log circuit-handle <cct-handle>
+show subscriber log  handle <cct-handle>
+
+show ism mbe clips log cct handle <cct-handle>  detail
+show ism mbe aaa log cct handle <cct-handle>  detail
+show ism mbe dhcpv6 log cct handle  <cct-handle> detail
+
+show ism client clips log cct handle <cct-handle> detail
+show ism client dhcp log cct handle  <cct-handle>  detail
+show ism client dhcpv6 log cct handle  <cct-handle> detail
+show ism client AAAD log cct handle <cct-handle> detail
+
