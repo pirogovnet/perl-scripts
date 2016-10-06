@@ -1,0 +1,22 @@
+Task - Generate configuration DHCP binding configuration for CISCO CNR 
+
+1)access switch 24 ports - subnet mask 255 255 255 224 (/27)
+
+netaddr		mask		 	MAC  		HOSTNAME 	DOMAIN  Switch-aggrr
+90.155.136.128	255.255.255.224 (/27)	 00:19:5b:8c:3c:3e	sw-22-003	lan	sw-12-001
+
+2) access switch 48 ports - subnet mask 255.255.255.192 (/26)
+
+netaddr		mask			MAC  			HOSTNAME 	DOMAIN  Switch-aggrr
+90.155.136.0	    255.255.255.192 (/26)	 00:1b:11:05:11:94  	sw-22-003	lan	sw-12-001
+
+
+
+cnr24.pl and cnr48.pl for switch type 1 or 2 
+ip-macXX.txt -  входные данные
+resXX.txt - res
+tXX.txt - template
+
+where XX - 24 or 48 depending on switch type 
+
+
