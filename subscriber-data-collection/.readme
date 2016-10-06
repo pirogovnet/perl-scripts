@@ -3,3 +3,36 @@ task - collect troubleshooting M commands for N clients\n
 command example - show clips log circuit <cct-handle>
 
 usage ./data-collection  file1-with-susbcribers.txt file2-template-with-commands.txt\n
+
+Example: 
+
+input file 
+
+        Internal Circuit   2/6:511:63:31/7/2/2696
+        Internal Circuit   2/6:511:63:31/7/2/2703
+        
+Run: 
+
+$ ./ipsec-data-collection.pl
+
+task - collect troubleshooting M commands for N clients
+
+usage ./data-collection  file1-with-susbcribers.txt file2-template-with-commands.txt
+
+ Show clips log circuit    2/6:511:63:31/7/2/2696
+show dhcpv6 log circuit-handle    2/6:511:63:31/7/2/2696
+show subscriber log  handle    2/6:511:63:31/7/2/2696
+
+show ism mbe clips log cct handle    2/6:511:63:31/7/2/2696  detail
+show ism mbe aaa log cct handle    2/6:511:63:31/7/2/2696  detail
+show ism mbe dhcpv6 log cct handle     2/6:511:63:31/7/2/2696 detail
+
+show ism client clips log cct handle    2/6:511:63:31/7/2/2696 detail
+show ism client dhcp log cct handle     2/6:511:63:31/7/2/2696  detail
+show ism client dhcpv6 log cct handle     2/6:511:63:31/7/2/2696 detail
+show ism client AAAD log cct handle    2/6:511:63:31/7/2/2696 detail
+
+Show clips log circuit    2/6:511:63:31/7/2/2703
+show dhcpv6 log circuit-handle    2/6:511:63:31/7/2/2703
+show subscriber log  handle    2/6:511:63:31/7/2/2703
+
