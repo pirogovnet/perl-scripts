@@ -1,0 +1,5 @@
+task - collect troubleshooting M commands for N clients\n 
+
+command example - show clips log circuit <cct-handle>
+
+usage ./data-collection  file1-with-susbcribers.txt file2-template-with-commands.txt\n
